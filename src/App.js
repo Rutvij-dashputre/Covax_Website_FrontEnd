@@ -2,6 +2,7 @@
 import React from 'react';
 //import { Route } from 'react-router-dom';
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
 //import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
 
 //import { Switch, Route, Redirect } from "react-router-dom"
@@ -18,16 +19,18 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 // import Pgdbda from "./Pgdbda";
 // import Navbar from "./Navbar";
 // import Footer from "./Footer";
-import Register from "./Register"
+import HospReg from "./HospReg"
+
 
 const App = () => {
-    return ( 
-     
-    <>
-    <Register/>
-    {/* <Navbar /> */}
-   
-    {/* <Switch>
+    return (
+
+        <>
+            <HospReg />
+            
+            {/* <Navbar /> */}
+
+            {/* <Switch>
         <Route exact path="/" component={Home}/>
         <Route exact path="/About" component={About}/>
         <Route exact path="/Contact" component={Contact}/>
@@ -44,7 +47,7 @@ const App = () => {
 
          </Switch>
          <Footer /> */}
-    </>
+        </>
 
     );
 };
