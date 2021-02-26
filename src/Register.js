@@ -56,6 +56,12 @@ const Register = () => {
 
         </div>
 
+
+        <div class="col-md-3" style={{ color: "#F8F9F9 " }}>
+          <label for="exampleFormControlInput1" class="form-label">Age</label>
+          <input type="number" class="form-control" id="exampleFormControlInput1" />
+
+        </div>
         {/* <div class="col-md-3" style={{ color: "#F8F9F9" }}>
     <label for="validationDefault04" class="form-label">Courses</label>
     <select class="form-select" id="validationDefault04" required>
