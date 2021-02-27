@@ -2,6 +2,8 @@
 import React from 'react';
 //import { Route } from 'react-router-dom';
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
 /* import { Link } from 'react-router-dom'; */
 
 //import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
@@ -23,13 +25,28 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Login from "./Login"
 
 
+
 const App = () => {
     return (
 
         <>
-            <Login />
-         
-            
+            <Router>
+                <Switch>
+                    <Route path='/' exact component={Login} />
+
+
+
+                </Switch>
+
+
+            </Router>
+
+
+
+
+
+
+
             {/* <Navbar /> */}
 
             {/* <Switch>
