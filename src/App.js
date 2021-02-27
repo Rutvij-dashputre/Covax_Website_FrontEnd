@@ -2,6 +2,7 @@
 import React from 'react';
 //import { Route } from 'react-router-dom';
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+/* import { Link } from 'react-router-dom'; */
 
 //import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
 
@@ -19,14 +20,15 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 // import Pgdbda from "./Pgdbda";
 // import Navbar from "./Navbar";
 // import Footer from "./Footer";
-import HospReg from "./HospReg"
+import Login from "./Login"
 
 
 const App = () => {
     return (
 
         <>
-            <HospReg />
+            <Login />
+         
             
             {/* <Navbar /> */}
 
