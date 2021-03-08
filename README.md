@@ -1,1 +1,3 @@
-# Final_Project
+/*
+  Covid vaccine website using React Js and SpringBoot.
+*/
