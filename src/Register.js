@@ -1,6 +1,6 @@
 import React from 'react';
-//import Navbar from "./Navbar";
-// import { NavLink } from 'react-router-dom';
+import Navbar from "./Navbar";
+//  import { NavLink } from 'react-router-dom';
 //import web from "../src/Images/logini.jpg"
 
 // var sectionStyle = {
@@ -14,8 +14,8 @@ import React from 'react';
 const Register = () => {
   return (<>
 
-    <div style={{ backgroundColor: "black" }} >
-      {/* <Navbar /> */}
+    <div style={{ backgroundColor: "#116466" }} >
+      <Navbar />
       <div style={{ textAlign: "center", margin: "50px", color: "#F8F9F9" }}><h1><strong>REGISTER HERE</strong></h1></div>
 
       <form class="row g-3" style={{ padding: "48px" }} >

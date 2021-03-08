@@ -97,8 +97,9 @@ class Login extends React.Component {
 
         </form>
    
-<Footer />
+
       </div>
+      <div><Footer /></div>
     </>
 
     );
