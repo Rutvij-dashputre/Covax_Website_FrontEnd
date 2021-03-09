@@ -1,15 +1,7 @@
 import React from 'react';
 import Navbar from "./Navbar";
 import { NavLink } from 'react-router-dom';
-//  import { NavLink } from 'react-router-dom';
-//import web from "../src/Images/logini.jpg"
 
-// var sectionStyle = {
-//     backgroundImage: `url(${web})`,
-//     backgroundRepeat: 'no-repeat',
-//     backgroundSize: 'cover', 
-
-//   }
 
 
 const HospReg = () => {

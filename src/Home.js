@@ -4,14 +4,6 @@ import { NavLink } from 'react-router-dom';
 import img1 from "../src/Images/commuimmu.jpg"
 import img2 from "../src/Images/dontwait.jpg"
 import img3 from "../src/Images/vaccine.jpg"
-//import web from "../src/Images/vaccinebottle.png"
-
-// var sectionStyle = {
-//     backgroundImage: `url(${web})`,
-//     backgroundRepeat: 'no-repeat',
-//     backgroundSize: 'cover', 
-
-//   }
 
 class Home extends React.Component {
     constructor(props) {
@@ -171,7 +163,7 @@ class Home extends React.Component {
                                                             </div>
                                                             {/* <button class="btn btn-primary" type="submit">Submit</button> */}
                                                             <div class="col-12" style={{ textAlign: "center", color: "White" }}>
-                                                                <NavLink to="/Register" class="btn btn-success" style={{ padding: "6px 24px" }} >Create New Account</NavLink><br></br>
+                                                                <NavLink to="/CreatePatientComponent" class="btn btn-success" style={{ padding: "6px 24px" }} >Create New Account</NavLink><br></br>
                                                             </div>
                                                             <div class="col-12" style={{ textAlign: "center", color: "White",padding: "12px 12px" }}>
                                                                 <NavLink to="/HospReg" class="btn btn-success" style={{ background: "#5c7b90",padding: "6px 24px" }} >Hospital Registration</NavLink><br></br>

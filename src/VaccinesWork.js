@@ -1,16 +1,6 @@
 import React from 'react';
-//import { NavLink } from 'react-router-dom';
-//import webimg from "./image/about1.jpg";
-//import home1img from "./image/about.jpg";
 import Navbar from './Navbar';
-//import web from "../src/Images/tp1.png"
 
-// var sectionStyle = {
-//     backgroundImage: `url(${web})`,
-//     backgroundRepeat: 'no-repeat',
-//     backgroundSize: 'cover', 
-
-//   }
 
 
 const VaccinesWork = () => {

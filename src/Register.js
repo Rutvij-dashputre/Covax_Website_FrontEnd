@@ -1,15 +1,5 @@
 import React from 'react';
 import Navbar from "./Navbar";
-//  import { NavLink } from 'react-router-dom';
-//import web from "../src/Images/logini.jpg"
-
-// var sectionStyle = {
-//     backgroundImage: `url(${web})`,
-//     backgroundRepeat: 'no-repeat',
-//     backgroundSize: 'cover', 
-
-//   }
-
 
 const Register = () => {
   return (<>
@@ -101,7 +91,7 @@ const Register = () => {
           <input type="number" class="form-control" id="exampleFormControlInput1" />
 
         </div>
-
+{/* 
         <div class="col-md-3" style={{ color: "#F8F9F9" }}>
           <label for="validationDefault04" class="form-label">Covid Patient</label>
           <select class="form-select" id="validationDefault04" required>
@@ -109,7 +99,7 @@ const Register = () => {
             <option>Yes</option>
             <option>No</option>
           </select>
-        </div>
+        </div> */}
 
         <div class="col-12" style={{ color: "#F8F9F9 " }}>
           <div class="form-check">
