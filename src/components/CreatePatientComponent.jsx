@@ -95,19 +95,19 @@ class CreatePatientComponent extends Component {
                 <form className="row g-3" style={{ padding: "48px" }} >
 
                     <div className="col-md-3" style={{ color: "#F8F9F9" }}>
-                        <label for="validationDefault01" className="form-label">Name</label>
+                        <label htmlFor="validationDefault01" className="form-label">Name</label>
                         <input type="text" className="form-control" id="validationDefault01" placeholder="Enter Your Name Here" required
                             value={this.state.name} onChange={this.changeNameHandler} />
                     </div>
 
                     <div className="col-md-3" style={{ color: "#F8F9F9" }}>
-                        <label for="exampleFormControlInput1" className="form-label">Email Address</label>
+                        <label htmlFor="exampleFormControlInput1" className="form-label">Email Address</label>
                         <input type="email" className="form-control" id="exampleFormControlInput1"
                             placeholder="Ex. name@example.com" value={this.state.email} onChange={this.changeEmailHandler} />
                     </div>
 
                     <div className="col-md-3" style={{ color: "#F8F9F9" }}>
-                        <label for="validationDefaultUsername" className="form-label">Username</label>
+                        <label htmlFor="validationDefaultUsername" className="form-label">Username</label>
                         <div className="input-group">
 
                             <input type="text" className="form-control" id="validationDefaultUsername" placeholder="Enter Your Username" aria-describedby="inputGroupPrepend2" required
@@ -116,20 +116,20 @@ class CreatePatientComponent extends Component {
                     </div>
 
                     <div className="col-md-3" style={{ color: "#F8F9F9" }}>
-                        <label for="validationDefault05" className="form-label">Password</label>
+                        <label htmlFor="validationDefault05" className="form-label">Password</label>
                         <input type="password" className="form-control" id="validationDefault05" placeholder="Password must be Strong" required
                             value={this.state.password} onChange={this.changePasswordHandler} />
                     </div>
 
                     <div className="col-md-3" style={{ color: "#F8F9F9" }}>
-                        <label for="exampleFormControlTextarea1" className="form-label">Address</label>
+                        <label htmlFor="exampleFormControlTextarea1" className="form-label">Address</label>
                         <textarea className="form-control" id="exampleFormControlTextarea1" rows="1"
                             value={this.state.address} onChange={this.changeAddressHandler}>
                         </textarea>
                     </div>
 
                     <div className="col-md-3" style={{ color: "#F8F9F9 " }}>
-                        <label for="exampleFormControlInput1" className="form-label">Aadhaar Number</label>
+                        <label htmlFor="exampleFormControlInput1" className="form-label">Aadhaar Number</label>
                         <input type="number" className="form-control" id="exampleFormControlInput1"
                             value={this.state.aadharNo} onChange={this.changeAadharNoHandler} />
 
@@ -137,7 +137,7 @@ class CreatePatientComponent extends Component {
 
 
                     <div className="col-md-3" style={{ color: "#F8F9F9 " }}>
-                        <label for="exampleFormControlInput1" className="form-label">Age</label>
+                        <label htmlFor="exampleFormControlInput1" className="form-label">Age</label>
                         <input type="number" className="form-control" id="exampleFormControlInput1"
                             value={this.state.age} onChange={this.changeAgeHandler} />
 
@@ -145,7 +145,7 @@ class CreatePatientComponent extends Component {
 
 
                     <div className="col-md-3" style={{ color: "#F8F9F9" }}>
-                        <label for="validationDefault04" className="form-label">State</label>
+                        <label htmlFor="validationDefault04" className="form-label">State</label>
                         <select className="form-select" id="validationDefault04" required>
                             <option selected disabled value="">Select</option>
                             <option>Maharashtra</option>
@@ -157,7 +157,7 @@ class CreatePatientComponent extends Component {
                     </div>
 
                     <div className="col-md-3" style={{ color: "#F8F9F9" }}>
-                        <label for="validationDefault04" className="form-label">Gender</label>
+                        <label htmlFor="validationDefault04" className="form-label">Gender</label>
                         <select className="form-select" id="validationDefault04" required>
                             <option selected disabled value="">Select</option>
                             <option>Male</option>
@@ -170,7 +170,7 @@ class CreatePatientComponent extends Component {
 
 
                     <div className="col-md-3" style={{ color: "#F8F9F9 " }}>
-                        <label for="exampleFormControlInput1" className="form-label">Mobile Number</label>
+                        <label htmlFor="exampleFormControlInput1" className="form-label">Mobile Number</label>
                         <input type="number" className="form-control" id="exampleFormControlInput1"
                             value={this.state.mbile} onChange={this.changeMobileHandler} />
 
