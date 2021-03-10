@@ -19,7 +19,7 @@ class CreatePatientComponent extends Component {
             mobile: ''
 
         }
-        /* this.changeNameHandler = this.changeNameHandler.bind(this);
+        this.changeNameHandler = this.changeNameHandler.bind(this);
         this.changeEmailHandler = this.changeEmailHandler.bind(this);
         this.changeUserNameHandler = this.changeUserNameHandler.bind(this);
         this.changePasswordHandler = this.changePasswordHandler.bind(this);
@@ -28,7 +28,7 @@ class CreatePatientComponent extends Component {
         this.changeAgeHandler = this.changeAgeHandler.bind(this);
         this.changeStateHandler = this.changeStateHandler.bind(this);
         this.changeGenderHandler = this.changeGenderHandler.bind(this);
-        this.changeMobileHandler = this.changeMobileHandler.bind(this); */
+        this.changeMobileHandler = this.changeMobileHandler.bind(this);
         this.savePatient = this.savePatient.bind(this);
 
     }
