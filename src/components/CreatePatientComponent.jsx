@@ -145,30 +145,22 @@ class CreatePatientComponent extends Component {
 
 
                     <div className="col-md-3" style={{ color: "#F8F9F9" }}>
-                        <label htmlFor="validationDefault04" className="form-label">State</label>
-                        <select className="form-select" id="validationDefault04" required>
-                            <option selected disabled value="">Select</option>
-                            <option>Maharashtra</option>
-                            <option>Gujarat</option>
-                            <option>Bihar</option>
-                            <option>Rajastan</option>
-                    value={this.state.state} onChange={this.changeStateHandler}
-                        </select>
+                        <label htmlFor="exampleFormControlTextarea1" className="form-label">State</label>
+                        <textarea className="form-control" id="exampleFormControlTextarea1" rows="1"
+                            value={this.state.state} onChange={this.changeStateHandler}>
+                        </textarea>
                     </div>
 
+               
                     <div className="col-md-3" style={{ color: "#F8F9F9" }}>
-                        <label htmlFor="validationDefault04" className="form-label">Gender</label>
-                        <select className="form-select" id="validationDefault04" required>
-                            <option selected disabled value="">Select</option>
-                            <option>Male</option>
-                            <option>Female</option>
-                            <option>Others</option>
-                    value={this.state.gender} onChange={this.changeGenderHandler}
-                        </select>
+                        <label htmlFor="exampleFormControlTextarea1" className="form-label">Gender</label>
+                        <textarea className="form-control" id="exampleFormControlTextarea1" rows="1"
+                              value={this.state.gender} onChange={this.changeGenderHandler}>
+                        </textarea>
                     </div>
 
 
-
+                 
                     <div className="col-md-3" style={{ color: "#F8F9F9 " }}>
                         <label htmlFor="exampleFormControlInput1" className="form-label">Mobile Number</label>
                         <input type="number" className="form-control" id="exampleFormControlInput1"
