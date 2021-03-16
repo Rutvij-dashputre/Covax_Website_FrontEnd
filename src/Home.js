@@ -32,17 +32,6 @@ class Home extends React.Component {
                 // errors.phone = value.length  !=10 ? "Phone Number must be 10  Numbers" : "";
                 break;
 
-            // case "email":
-            //     errors.email = value.length < 5 ? "Email must be 5 characters length" : "";
-
-            //     let apos = value.indexOf('@');
-            //     let dotpos = value.lastIndexOf('.');
-
-            //     if (apos < 1 || dotpos - apos < 2) {
-            //         errors.email = "please enter valid Email Id"
-            //     }
-            //  break;
-
             default:
                 break;
         }
@@ -51,19 +40,6 @@ class Home extends React.Component {
         this.setState({ errors, [name]: value });
     };
 
-    // submitHandler = (event) => {
-    //     event.preventDefault();
-    //     if(
-    //         this.state.errors.fullname.length === 0 &&  this.state.errors.phone.length ===0 &&
-    //         this.state.errors.email.length === 0
-    //     )
-    //     {
-    //         alert("From is Valid");
-    //     }
-    //     else{
-    //         alert("From is not Valid");
-    //     }
-    // }
 
     render() {
         const { errors } = this.state;
@@ -80,7 +56,7 @@ class Home extends React.Component {
                     <div className="container-fluid nav_bg" >
 
                         <div className="row">
-                            {/* <div className="row-6"></div> */}
+                           
                             <div className="col-10  mx-auto">
                                 <div className="row">
 
@@ -155,18 +131,17 @@ class Home extends React.Component {
                 </div> */}
 
                                                         <div class="col-12" style={{ textAlign: "center", color: "White" }}>
-                                                            <NavLink to="/Register" class="btn btn-success" style={{ background: "#1877F2", padding: "8px 50px" }} >Log In</NavLink><br></br>
+                                                            <NavLink to="/Hospital" class="btn btn-success" style={{ background: "#1877F2", padding: "8px 50px" }} >Log In</NavLink><br></br>
 
-                                                            {/* <a new_account ="" href="/Register">Don't have Account?</a><br/> */}
-                                                            <div class="col-12" style={{ textAlign: "center", color: "White",padding:"12px 12px" }}>
-                                                            <a forgot_password="" href="/login/forget">Forgot Password?</a><br />
+                                                            <div class="col-12" style={{ textAlign: "center", color: "White", padding: "12px 12px" }}>
+                                                                <a forgot_password="" href="/login/forget">Forgot Password?</a><br />
                                                             </div>
                                                             {/* <button class="btn btn-primary" type="submit">Submit</button> */}
                                                             <div class="col-12" style={{ textAlign: "center", color: "White" }}>
                                                                 <NavLink to="/CreatePatientComponent" class="btn btn-success" style={{ padding: "6px 24px" }} >Create New Account</NavLink><br></br>
                                                             </div>
-                                                            <div class="col-12" style={{ textAlign: "center", color: "White",padding: "12px 12px" }}>
-                                                                <NavLink to="/CreateHospitalComponent" class="btn btn-success" style={{ background: "#5c7b90",padding: "6px 24px" }} >Hospital Registration</NavLink><br></br>
+                                                            <div class="col-12" style={{ textAlign: "center", color: "White", padding: "12px 12px" }}>
+                                                                <NavLink to="/CreateHospitalComponent" class="btn btn-success" style={{ background: "#5c7b90", padding: "6px 24px" }} >Hospital Registration</NavLink><br></br>
                                                             </div>
 
                                                         </div>
@@ -223,7 +198,7 @@ class Home extends React.Component {
                                         <div class="card-body" style={{ backgroundColor: "#D2B4DE" }}>
 
                                             <h5 class="card-title" style={{ textAlign: "center" }}><strong>Do not wait. Vaccinate!</strong></h5>
-                                            <p class="card-text" style={{ textAlign: "center" }}>Protect yourself and your loved ones. Get your flu shot now.</p><br/>
+                                            <p class="card-text" style={{ textAlign: "center" }}>Protect yourself and your loved ones. Get your flu shot now.</p><br />
                                             {/* <NavLink to="/SignUp" class="btn btn-primary d-flex justify-content-center">REGISTER HERE</NavLink> */}
                                             <NavLink to="/DontWaitVaccinate" class="btn btn-primary d-flex justify-content-center">MORE INFORMATION</NavLink>
                                         </div>

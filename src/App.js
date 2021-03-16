@@ -12,6 +12,8 @@ import DontWaitVaccinate from "./DontWaitVaccinate";
 import VaccinesWork from "./VaccinesWork";
 import Contact from "./Contact";
 import About from "./About";
+import Hospital from "./Hospital";
+import Carousel1 from "./Corousel";
 import ListPatientComponent from './components/ListPatientComponent';
 import CreatePatientComponent from './components/CreatePatientComponent';
 import CreateHospitalComponent from './components/CreateHospitalComponent';
@@ -32,6 +34,8 @@ const App = () => {
                 <Route exact path="/VaccinesWork" component={VaccinesWork} />
                 <Route exact path="/Contact" component={Contact} />
                 <Route exact path="/About" component={About} />
+                <Route exact path="/Hospital" component={Hospital} />
+                <Route exact path="/Carousel1" component={Carousel1} />
                 <Route exact path="/result" component={ListPatientComponent} />
                 <Redirect to="/" />
             </Switch>
