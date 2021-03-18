@@ -17,7 +17,8 @@ import Carousel1 from "./Corousel";
 import ListPatientComponent from './components/ListPatientComponent';
 import CreatePatientComponent from './components/CreatePatientComponent';
 import CreateHospitalComponent from './components/CreateHospitalComponent';
-
+import GoogleMap from './components/GoogleMap';
+import ForgotPasswordComponent from './components/ForgotPasswordComponent';
 
 
 const App = () => {
@@ -27,6 +28,7 @@ const App = () => {
             <Switch>
                 <Route exact path="/" component={Home} />
                 <Route exact path="/CreatePatientComponent" component={CreatePatientComponent} />
+                <Route exact path="/ForgotPasswordComponent" component={ForgotPasswordComponent} />
                 <Route exact path="/CreateHospitalComponent" component={CreateHospitalComponent} />
                 <Route exact path="/Covid19Info" component={Covid19Info} />
                 <Route exact path="/CommunityImmu" component={CommunityImmu} />
@@ -36,6 +38,7 @@ const App = () => {
                 <Route exact path="/About" component={About} />
                 <Route exact path="/Hospital" component={Hospital} />
                 <Route exact path="/Carousel1" component={Carousel1} />
+                <Route exact path="/GoogleMap" component={GoogleMap} />
                 <Route exact path="/result" component={ListPatientComponent} />
                 <Redirect to="/" />
             </Switch>

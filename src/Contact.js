@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-// import React from 'react'
+/* import React, { useState } from 'react'; */
+ import React from 'react';
 import Navbar from "./Navbar";
-import { NavLink } from 'react-router-dom';
 //import web from "../src/Images/cont.jpg";
 
 
@@ -39,7 +38,7 @@ class Contact extends React.Component {
                 break;
 
             case "phone":
-                errors.phone = value.length != 10 ? "* Enter valid number" : "";
+                errors.phone = value.length !== 10 ? "* Enter valid number" : "";
                 break;
 
             case "email":

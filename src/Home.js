@@ -133,11 +133,11 @@ class Home extends React.Component {
                                                         <div class="col-12" style={{ textAlign: "center", color: "White" }}>
                                                             <NavLink to="/Hospital" class="btn btn-success" style={{ background: "#1877F2", padding: "8px 50px" }} >Log In</NavLink><br></br>
 
-                                                            <div class="col-12" style={{ textAlign: "center", color: "White", padding: "12px 12px" }}>
-                                                                <a forgot_password="" href="/login/forget">Forgot Password?</a><br />
+                                                            <div class="col-12 " style={{ textAlign: "center", color: "White", padding: "12px 12px" }}>
+                                                              <NavLink to="/ForgotPasswordComponent">  <a forgot_password="" href="/login/forget">Forgot Password ?</a><br />  </NavLink>
                                                             </div>
                                                             {/* <button class="btn btn-primary" type="submit">Submit</button> */}
-                                                            <div class="col-12" style={{ textAlign: "center", color: "White" }}>
+                                                            <div class="col-12" style={{ textAlign: "center", color: "Black" }}>
                                                                 <NavLink to="/CreatePatientComponent" class="btn btn-success" style={{ padding: "6px 24px" }} >Create New Account</NavLink><br></br>
                                                             </div>
                                                             <div class="col-12" style={{ textAlign: "center", color: "White", padding: "12px 12px" }}>
