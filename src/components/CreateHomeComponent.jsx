@@ -1,54 +1,53 @@
-import React from 'react';
-import Navbar from "./Navbar";
+import React, { Component } from 'react';
+import AuthService from '../services/AuthService';
 import { NavLink } from 'react-router-dom';
-import img1 from "../src/Images/commuimmu.jpg"
-import img2 from "../src/Images/dontwait.jpg"
-import img3 from "../src/Images/vaccine.jpg"
+import Navbar from "../Navbar";
+import img1 from "../Images/commuimmu.jpg"
+import img2 from "../Images/dontwait.jpg"
+import img3 from "../Images/vaccine.jpg"
 
-class Home extends React.Component {
+
+class CreateHomeComponent extends Component {
     constructor(props) {
-        super(props);
+        super(props)
+
         this.state = {
-            errors: {
-                username: "",
-                password: "",
-                // email: "",
-            },
-
-        };
-    }
-
-    changeHandler = (event) => {
-        let name = event.target.name;
-        let value = event.target.value;
-        let errors = this.state.errors;
-
-        switch (name) {
-            case "username":
-                // errors.username = value.length < 5 ? "Full Name must be 5 characters length" : "";
-                break;
-
-            case "password":
-                // errors.phone = value.length  !=10 ? "Phone Number must be 10  Numbers" : "";
-                break;
-
-            default:
-                break;
+            username: '',
+            password: ''
         }
 
-        // console.log(this.state)
-        this.setState({ errors, [name]: value });
-    };
+        this.changeUserNameHandler = this.changeUserNameHandler.bind(this);
+        this.changePasswordHandler = this.changePasswordHandler.bind(this);
+        this.saveSession = this.saveSession.bind(this);
+
+    }
+
+    saveSession = (e) => {
+        e.preventDefault();
+        let Auth = {
+            username: this.state.username,
+            password: this.state.password
+
+        };
+        console.log('Auth =>' + JSON.stringify(Auth));
+
+        AuthService.checkAuth(Auth).then(res => {
+            console.log('success');
+        });
+
+    }
+
+    changeUserNameHandler = (event) => {
+        this.setState({ username: event.target.value });
+    }
+
+    changePasswordHandler = (event) => {
+        this.setState({ password: event.target.value });
+    }
 
 
     render() {
-        const { errors } = this.state;
-
-
-
-        // const Home = () => {
         return (<>
-
             <div style={{ backgroundColor: "#116466" }}>
                 <Navbar />
 
@@ -92,10 +91,10 @@ class Home extends React.Component {
                                                             <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your Full Name Here" required
                                                                 name="username"
 
-                                                                onChange={this.changeHandler}
+                                                                value={this.state.username} onChange={this.changeUserNameHandler}
 
                                                                 placeholder="Enter Your Username" />
-                                                            <p style={{ color: "red" }}>{errors.username}</p>
+                                                            {/* <p style={{ color: "red" }}>{errors.username}</p> */}
 
                                                         </div>
 
@@ -104,34 +103,14 @@ class Home extends React.Component {
                                                             <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your Valid Password Here" required
                                                                 name="phone"
 
-                                                                onChange={this.changeHandler}
+                                                                value={this.state.password} onChange={this.changePasswordHandler} 
                                                                 placeholder="Enter Your Valid Password" />
-                                                            <p style={{ color: "red" }}>{errors.phone}</p>
+                                                            {/* <p style={{ color: "red" }}>{errors.phone}</p> */}
 
                                                         </div>
 
-                                                        {/* <div class="mb-3" style={{ color: "#F8F9F9" }}>
-                    <label for="validationDefault01" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your Email Here" required
-                        name="email"
-                       
-                        onChange={this.changeHandler}
-                        placeholder="name@example.com" />
-                        <p style={{color:"red"}}>{errors.email}</p>
-
-                </div> */}
-                                                        {/* <div class="mb-3" style={{ color: "#F8F9F9" }}>
-                    <label for="validationDefault01" class="form-label">Message</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Enter Your Message Here" required
-                        name="msg"
-                     
-                        onChange={InputEvent}>
-
-                    </textarea>
-                </div> */}
-
                                                         <div class="col-12" style={{ textAlign: "center", color: "White" }}>
-                                                            <NavLink to="/Hospital" class="btn btn-success" style={{ background: "#1877F2", padding: "8px 50px" }} >Log In</NavLink><br></br>
+                                                            <NavLink to="/Hospital" class="btn btn-success" onClick={this.saveSession} style={{ background: "#1877F2", padding: "8px 50px" }} >Log In</NavLink><br></br>
 
                                                             <div class="col-12 " style={{ textAlign: "center", color: "White", padding: "12px 12px" }}>
                                                                 <NavLink to="/ForgotPasswordComponent">  <a forgot_password="" href="/login/forget">Forgot Password ?</a><br />  </NavLink>
@@ -215,8 +194,13 @@ class Home extends React.Component {
             </div>
         </>
 
+
         );
     }
-};
+}
 
-export default Home;
+export default CreateHomeComponent;
+
+
+
+

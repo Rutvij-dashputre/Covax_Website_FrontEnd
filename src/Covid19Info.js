@@ -21,7 +21,7 @@ const Covid19Info = () => {
  
  <Navbar /> 
  </div>
- <div style={{paddingTop:"40vh",backgroundColor: "#116466",color:"white" }}> 
+ <div style={{paddingTop:"20vh",backgroundColor: "#116466",color:"white" }}> 
         <section id="header" className="d-flex align-items-center "   >
             <div className="container-fluid nav_bg">
                 <div className="row">
@@ -73,7 +73,7 @@ const Covid19Info = () => {
                                   1. On the arm where you got the shot: Pain, Swelling.<br/>
                                   2. Throughout the rest of your body: Fever, Chills, Tiredness, Headache
                                 </ul>
-                                  
+                                    
                                   
                                     
                                   

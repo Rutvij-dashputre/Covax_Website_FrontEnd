@@ -46,7 +46,7 @@ class CreatePatientComponent extends Component {
         PatientService.createPatient(patient).then(res => {
             console.log('success');
         });
-
+    
     }
     changeNameHandler = (event) => {
         this.setState({ name: event.target.value });
@@ -88,11 +88,11 @@ class CreatePatientComponent extends Component {
     render() {
         return (<>
 
-            <div style={{ backgroundColor: "#116466" }} >
+            <div style={{ backgroundColor: "#116466",width:"100%" }} >
 
-                <div style={{ textAlign: "center", margin: "50px", color: "#F8F9F9" }}><h1><strong>REGISTER HERE</strong></h1></div>
+                <div style={{ textAlign: "center", margin: "00px", color: "#F8F9F9"}}><h1><strong>REGISTER HERE</strong></h1></div>
 
-                <form className="row g-3" style={{ padding: "48px" }} >
+                <form className="row g-3" style={{ padding: "48px",width:"100%"}} >
 
                     <div className="col-md-3" style={{ color: "#F8F9F9" }}>
                         <label htmlFor="validationDefault01" className="form-label">Name</label>
@@ -151,16 +151,16 @@ class CreatePatientComponent extends Component {
                         </textarea>
                     </div>
 
-
+               
                     <div className="col-md-3" style={{ color: "#F8F9F9" }}>
                         <label htmlFor="exampleFormControlTextarea1" className="form-label">Gender</label>
                         <textarea className="form-control" id="exampleFormControlTextarea1" rows="1"
-                            value={this.state.gender} onChange={this.changeGenderHandler}>
+                              value={this.state.gender} onChange={this.changeGenderHandler}>
                         </textarea>
                     </div>
 
 
-
+                 
                     <div className="col-md-3" style={{ color: "#F8F9F9 " }}>
                         <label htmlFor="exampleFormControlInput1" className="form-label">Mobile Number</label>
                         <input type="number" className="form-control" id="exampleFormControlInput1"
@@ -174,7 +174,7 @@ class CreatePatientComponent extends Component {
                             <input className="form-check-input" type="checkbox" value="" id="invalidCheck2" required />
                             <label className="form-check-label" for="invalidCheck2">
                                 Agree to terms and conditions
-                            </label>
+              </label>
                         </div>
                     </div>
                     <div className="col-12" style={{ textAlign: "center" }}>

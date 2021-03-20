@@ -4,9 +4,15 @@ import Navbar from './Navbar';
 const About = () => {
     return (<>
 
+    
+
+
         <div style={{ backgroundColor: "#116466", color:"white"}}>
+        <div class="outer-div"><div class="inner-div"></div></div>
+
             <Navbar />
             <section id="header" className="d-flex align-items-center "   >
+
                 <div className="container-fluid nav_bg">
                     <div className="row">
                         <div className="col-10 mx-auto">

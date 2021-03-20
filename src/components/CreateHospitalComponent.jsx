@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import HospitalService from '../services/HospitalService';
 import { NavLink } from 'react-router-dom';
-import Navbar from "../Navbar";
+
 
 class CreateHospitalComponent extends Component {
     constructor(props) {
@@ -21,6 +21,7 @@ class CreateHospitalComponent extends Component {
         this.changePasswordHandler = this.changePasswordHandler.bind(this);
         this.changeAddressHandler = this.changeAddressHandler.bind(this);
         this.changePinCodeHandler = this.changePinCodeHandler.bind(this);
+
         this.saveHosp = this.saveHosp.bind(this);
 
     }
@@ -69,10 +70,10 @@ class CreateHospitalComponent extends Component {
         return (<>
 
             <div style={{ backgroundColor: "#116466" }} >
-                <Navbar />
-                <div style={{ textAlign: "center", margin: "50px", color: "#F8F9F9" }}><h1><strong>Hospital Registration</strong></h1></div>
+               
+                <div style={{ textAlign: "center", margin: "00px", color: "#F8F9F9" }}><h1><strong>Hospital Registration</strong></h1></div>
 
-                <form class="row g-3" style={{ padding: "48px" }} >
+                <form class="row g-3" style={{ padding: "48px",width:"100%" }} >
 
                     <div class="col-md-3" style={{ color: "#F8F9F9" }}>
                         <label for="validationDefault01" class="form-label">Organization</label>
@@ -89,6 +90,7 @@ class CreateHospitalComponent extends Component {
                     <div className="col-md-3" style={{ color: "#F8F9F9" }}>
                         <label htmlFor="validationDefaultUsername" className="form-label">Username</label>
                         <div className="input-group">
+
                             <input type="text" className="form-control" id="validationDefaultUsername" placeholder="Enter Your Username" aria-describedby="inputGroupPrepend2" required
                                 value={this.state.username} onChange={this.changeUserNameHandler} />
                         </div>
@@ -102,8 +104,9 @@ class CreateHospitalComponent extends Component {
 
                     <div class="col-md-3" style={{ color: "#F8F9F9" }}>
                         <label for="exampleFormControlTextarea1" class="form-label">Address</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"
-                            value={this.state.hspAdd} onChange={this.changeAddressHandler}>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" 
+                        value={this.state.hspAdd} onChange={this.changeAddressHandler}>
+                            
                         </textarea>
                     </div>
 
@@ -121,7 +124,7 @@ class CreateHospitalComponent extends Component {
                             <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required />
                             <label class="form-check-label" for="invalidCheck2">
                                 Agree to terms and conditions
-                            </label>
+              </label>
                         </div>
                     </div>
                     <div class="col-12" style={{ textAlign: "center" }}>

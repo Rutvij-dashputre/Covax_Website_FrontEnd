@@ -1,6 +1,7 @@
-/* import React, { useState } from 'react'; */
- import React from 'react';
+import React, { useState } from 'react';
+// import React from 'react'
 import Navbar from "./Navbar";
+import { NavLink } from 'react-router-dom';
 //import web from "../src/Images/cont.jpg";
 
 
@@ -38,7 +39,7 @@ class Contact extends React.Component {
                 break;
 
             case "phone":
-                errors.phone = value.length !== 10 ? "* Enter valid number" : "";
+                errors.phone = value.length != 10 ? "* Enter valid number" : "";
                 break;
 
             case "email":
@@ -157,7 +158,7 @@ class Contact extends React.Component {
                                                 </div>
 
                                                 <div class="col-12" style={{ textAlign: "center", color: "White" }}>
-                                                    <button class="btn btn-primary" type="submit" >Submit</button>
+                                                    <button class="btn btn-primary" type="submit"  >Submit</button>
 
                                                 </div>
 
