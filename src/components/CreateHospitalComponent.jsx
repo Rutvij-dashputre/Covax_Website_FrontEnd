@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import HospitalService from '../services/HospitalService';
 import { NavLink } from 'react-router-dom';
+import Navbar from "../Navbar";
 
 
 class CreateHospitalComponent extends Component {
@@ -70,7 +71,7 @@ class CreateHospitalComponent extends Component {
         return (<>
 
             <div style={{ backgroundColor: "#116466" }} >
-               
+               <Navbar />
                 <div style={{ textAlign: "center", margin: "00px", color: "#F8F9F9" }}><h1><strong>Hospital Registration</strong></h1></div>
 
                 <form class="row g-3" style={{ padding: "48px",width:"100%" }} >

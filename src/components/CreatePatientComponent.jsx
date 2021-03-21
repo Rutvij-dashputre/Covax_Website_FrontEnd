@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PatientService from '../services/PatientService';
+import Navbar from "../Navbar";
 
 
 class CreatePatientComponent extends Component {
@@ -105,7 +106,7 @@ class CreatePatientComponent extends Component {
         return (<>
 
             <div style={{ backgroundColor: "#116466", width: "100%" }} >
-
+            <Navbar />
                 <div style={{ textAlign: "center", margin: "00px", color: "#F8F9F9" }}><h1><strong>REGISTER HERE</strong></h1></div>
 
                 <form className="row g-3" style={{ padding: "48px", width: "100%" }} >

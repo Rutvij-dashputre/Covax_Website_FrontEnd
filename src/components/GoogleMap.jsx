@@ -11,6 +11,8 @@ class GoogleMap extends Component {
         showingInfoWindow: false,
         activeMarker: {},
         selectedPlace: {},
+        pincode: ''
+       
     };
 
     onMarkerClick = (props, marker, e) =>
@@ -28,6 +30,9 @@ class GoogleMap extends Component {
             })
         }
     };
+    changePincodeHandler = (event) => {
+        this.setState({ pincode: event.target.value });
+    }
 
     render() {
         return (
@@ -107,7 +112,7 @@ class GoogleMap extends Component {
                             {/*  <input type="text" class="form-control" id="exampleFormControlInput1"
                                 placeholder="Enter Place/Pincode" /> */}
                             <input type="text" class="form-control" id="validationDefault01" placeholder="Enter Pincode"
-                            />
+                            value={this.state.pincode} onChange={this.changePincodeHandler}/>
 
                             <br />
                             <div style={{ textAlign: "center" }}>
