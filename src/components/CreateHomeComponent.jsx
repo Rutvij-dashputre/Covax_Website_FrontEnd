@@ -110,7 +110,7 @@ class CreateHomeComponent extends Component {
                                                         </div>
 
                                                         <div class="col-12" style={{ textAlign: "center", color: "White" }}>
-                                                            <NavLink to="/Hospital" class="btn btn-success" onClick={this.saveSession} style={{ background: "#1877F2", padding: "8px 50px" }} >Log In</NavLink><br></br>
+                                                            <NavLink to="./Hospital" class="btn btn-success" onClick={this.saveSession} style={{ background: "#1877F2", padding: "8px 50px" }} >Log In</NavLink><br></br>
 
                                                             <div class="col-12 " style={{ textAlign: "center", color: "White", padding: "12px 12px" }}>
                                                                 <NavLink to="/ForgotPasswordComponent">  <a forgot_password="" href="/login/forget">Forgot Password ?</a><br />  </NavLink>

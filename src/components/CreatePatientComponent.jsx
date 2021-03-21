@@ -16,7 +16,9 @@ class CreatePatientComponent extends Component {
             age: '',
             state: '',
             gender: '',
-            mobile: ''
+            mobile: '',
+            pincode: '',
+            coronaPositive: true
 
         }
         this.changeNameHandler = this.changeNameHandler.bind(this);
@@ -29,6 +31,9 @@ class CreatePatientComponent extends Component {
         this.changeStateHandler = this.changeStateHandler.bind(this);
         this.changeGenderHandler = this.changeGenderHandler.bind(this);
         this.changeMobileHandler = this.changeMobileHandler.bind(this);
+        this.changePinCodeHandler = this.changePinCodeHandler.bind(this);
+        /* this.changeCoronaPositiveHandler = this.changeCoronaPositiveHandler.bind(this); */
+
         this.savePatient = this.savePatient.bind(this);
 
     }
@@ -39,14 +44,15 @@ class CreatePatientComponent extends Component {
             name: this.state.name, email: this.state.email, username: this.state.username,
             password: this.state.password,
             address: this.state.address, aadharNo: this.state.aadharNo, age: this.state.age,
-            state: this.state.state, gender: this.state.gender, mobile: this.state.mobile
+            state: this.state.state, gender: this.state.gender, mobile: this.state.mobile,
+            pincode: this.state.pincode, coronaPositive: this.state.coronaPositive
         };
         console.log('patient =>' + JSON.stringify(patient));
 
         PatientService.createPatient(patient).then(res => {
             console.log('success');
         });
-    
+
     }
     changeNameHandler = (event) => {
         this.setState({ name: event.target.value });
@@ -84,15 +90,25 @@ class CreatePatientComponent extends Component {
     changeMobileHandler = (event) => {
         this.setState({ mobile: event.target.value });
     }
-
+    changePinCodeHandler = (event) => {
+        this.setState({ pincode: event.target.value });
+    }
+    /*  changeCoronaPositiveHandler = (event) => {
+         this.setState({ coronaPositive: event.target.value });
+     } */
+    toggleChange = () => {
+        this.setState({
+            coronaPositive: !this.state.coronaPositive,
+        });
+    }
     render() {
         return (<>
 
-            <div style={{ backgroundColor: "#116466",width:"100%" }} >
+            <div style={{ backgroundColor: "#116466", width: "100%" }} >
 
-                <div style={{ textAlign: "center", margin: "00px", color: "#F8F9F9"}}><h1><strong>REGISTER HERE</strong></h1></div>
+                <div style={{ textAlign: "center", margin: "00px", color: "#F8F9F9" }}><h1><strong>REGISTER HERE</strong></h1></div>
 
-                <form className="row g-3" style={{ padding: "48px",width:"100%"}} >
+                <form className="row g-3" style={{ padding: "48px", width: "100%" }} >
 
                     <div className="col-md-3" style={{ color: "#F8F9F9" }}>
                         <label htmlFor="validationDefault01" className="form-label">Name</label>
@@ -151,32 +167,49 @@ class CreatePatientComponent extends Component {
                         </textarea>
                     </div>
 
-               
+
                     <div className="col-md-3" style={{ color: "#F8F9F9" }}>
                         <label htmlFor="exampleFormControlTextarea1" className="form-label">Gender</label>
                         <textarea className="form-control" id="exampleFormControlTextarea1" rows="1"
-                              value={this.state.gender} onChange={this.changeGenderHandler}>
+                            value={this.state.gender} onChange={this.changeGenderHandler}>
                         </textarea>
                     </div>
 
 
-                 
+
                     <div className="col-md-3" style={{ color: "#F8F9F9 " }}>
                         <label htmlFor="exampleFormControlInput1" className="form-label">Mobile Number</label>
                         <input type="number" className="form-control" id="exampleFormControlInput1"
-                            value={this.state.mbile} onChange={this.changeMobileHandler} />
+                            value={this.state.mobile} onChange={this.changeMobileHandler} />
+
+                    </div>
+                    <div className="col-md-3" style={{ color: "#F8F9F9 " }}>
+                        <label htmlFor="exampleFormControlInput1" className="form-label">Pin Code</label>
+                        <input type="number" className="form-control" id="exampleFormControlInput1"
+                            value={this.state.pincode} onChange={this.changePinCodeHandler} />
 
                     </div>
 
 
-                    <div className="col-12" style={{ color: "#F8F9F9 " }}>
+                    <div className="col-12 d-flex align-items-center" style={{ color: "#F8F9F9 " }}>
                         <div className="form-check">
                             <input className="form-check-input" type="checkbox" value="" id="invalidCheck2" required />
                             <label className="form-check-label" for="invalidCheck2">
                                 Agree to terms and conditions
               </label>
                         </div>
+                        <div  className="form-check mb-0  margin-left-2">
+                            <input  className="form-check-input " type="checkbox"
+                                defaultChecked={this.state.coronaPositive}
+                                onChange={this.toggleChange}
+                            />
+
+                            <label className="form-check-label" for="invalidCheck2">
+                                Corona Positive
+              </label>
+                        </div>
                     </div>
+
                     <div className="col-12" style={{ textAlign: "center" }}>
                         {/* <NavLink to="/Login" className="btn btn-primary ">SUBMIT</NavLink> */}
                         <button className="btn btn-primary" type="submit" onClick={this.savePatient}>Submit</button>

@@ -4,11 +4,11 @@ import Navbar from './Navbar';
 const About = () => {
     return (<>
 
-    
 
 
-        <div style={{ backgroundColor: "#116466", color:"white"}}>
-        <div class="outer-div"><div class="inner-div"></div></div>
+
+        <div style={{ backgroundColor: "#116466", color: "white" }}>
+            <div class="outer-div"><div class="inner-div"></div></div>
 
             <Navbar />
             <section id="header" className="d-flex align-items-center "   >
@@ -45,13 +45,6 @@ Whether you want trusted vaccination information for yourself, a loved one, or o
 <br /></h6>
 
                                     <h6 style={{ textAlign: "justify" }}>This website can be shared through various social media platforms. The main aim is that every common man should have access to this website and have updates regarding the vaccine.  <br></br></h6>
-
-
-
-
-
-
-
 
                                     <br />
                                     <br />

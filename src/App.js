@@ -1,4 +1,3 @@
-
 import React from 'react';
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
@@ -40,13 +39,13 @@ const App = () => {
                 <Route exact path="/Hospital" component={Hospital} />
                 <Route exact path="/Carousel1" component={Carousel1} />
                 <Route exact path="/GoogleMap" component={GoogleMap} />
-                <Route exact path="/result" component={ListPatientComponent} />
+                <Route exact path="/admin" component={ListPatientComponent} />
                 <Redirect to="/" />
             </Switch>
 
         </>
 
     );
-};
+    };
 
 export default App;
