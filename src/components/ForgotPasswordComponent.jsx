@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-/* import HospitalService from '../services/HospitalService'; */
+import ResetService from '../services/PasswordResetService'; 
 import { NavLink } from 'react-router-dom';
 import Navbar from "../Navbar";
 
@@ -14,23 +14,23 @@ class ForgotPasswordComponent extends Component {
         }
       
         this.changeEmailHandler = this.changeEmailHandler.bind(this);
-      /*   this.saveHosp = this.saveHosp.bind(this); */
+        this.sendMail = this.sendMail.bind(this);
 
     }
 
-  /*   saveHosp = (e) => {
+    sendMail = (e) => {
         e.preventDefault();
-        let hospital = {
+        let mail = {
            email: this.state.email
         };
-        console.log('hospital =>' + JSON.stringify(hospital));
+        console.log('mail =>' + JSON.stringify(mail));
 
-        HospitalService.createHosp(hospital).then(res => {
-            console.log('success');
+        ResetService.reset(mail).then(res => {
+            alert('Mail sent');
         });
 
     }
-     */
+    
     changeEmailHandler = (event) => {
         this.setState({ email: event.target.value });
     }
@@ -52,7 +52,7 @@ class ForgotPasswordComponent extends Component {
 
                     <div className="col-12" style={{ textAlign: "center" }}>
                         {/* <NavLink to="/Login" class="btn btn-primary ">SUBMIT</NavLink> */}
-                        <NavLink to="/Home" class="btn btn-success"/*  onClick={this.saveHosp} */ style={{ background: "#1877F2", padding: "6px 24px" }} >Submit</NavLink>
+                        <NavLink to="/PasswordResetComponent" class="btn btn-success" onClick={this.sendMail} style={{ background: "#1877F2", padding: "6px 24px" }} >Submit</NavLink>
                     </div>
                    
 

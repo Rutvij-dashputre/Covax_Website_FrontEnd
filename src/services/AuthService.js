@@ -6,9 +6,10 @@ const headers = { 'Content-Type': 'application/json' };
 
 class AuthService {
 
-    checkAuth(patient) {
-        return axios.post(AUTH_API_POSTING_URL, patient, { headers: headers });
+    checkAuth(Auth) {
+        return axios.post(AUTH_API_POSTING_URL, Auth, { headers: headers });
     }
+
 }
 
 export default new AuthService();

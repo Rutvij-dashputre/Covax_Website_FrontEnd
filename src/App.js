@@ -17,9 +17,11 @@ import ListPatientComponent from './components/ListPatientComponent';
 import CreatePatientComponent from './components/CreatePatientComponent';
 import CreateHospitalComponent from './components/CreateHospitalComponent';
 import CreateHomeComponent from './components/CreateHomeComponent';
+import PasswordResetComponent from './components/PasswordResetComponent';
+import HospitalLoginComponent from './components/HospitalLoginComponent';
 import GoogleMap from './components/GoogleMap';
 import ForgotPasswordComponent from './components/ForgotPasswordComponent';
-
+import CreateSessionComponent from './components/CreateSessionComponent';
 
 const App = () => {
     return (
@@ -28,8 +30,11 @@ const App = () => {
             <Switch>
                 <Route exact path="/" component={CreateHomeComponent} />
                 <Route exact path="/CreatePatientComponent" component={CreatePatientComponent} />
+                <Route exact path="/CreateSessionComponent" component={CreateSessionComponent} />
                 <Route exact path="/ForgotPasswordComponent" component={ForgotPasswordComponent} />
                 <Route exact path="/CreateHospitalComponent" component={CreateHospitalComponent} />
+                <Route exact path="/PasswordResetComponent" component={PasswordResetComponent} />
+                <Route exact path="/HospitalLoginComponent" component={HospitalLoginComponent} />
                 <Route exact path="/Covid19Info" component={Covid19Info} />
                 <Route exact path="/CommunityImmu" component={CommunityImmu} />
                 <Route exact path="/DontWaitVaccinate" component={DontWaitVaccinate} />
@@ -46,6 +51,6 @@ const App = () => {
         </>
 
     );
-    };
+};
 
 export default App;

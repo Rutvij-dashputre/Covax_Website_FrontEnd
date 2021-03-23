@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import AuthService from '../services/AuthService';
-import { NavLink } from 'react-router-dom';
+import { NavLink , Redirect } from 'react-router-dom';
 import Navbar from "../Navbar";
 import img1 from "../Images/commuimmu.jpg"
 import img2 from "../Images/dontwait.jpg"
@@ -10,10 +10,11 @@ import img3 from "../Images/vaccine.jpg"
 class CreateHomeComponent extends Component {
     constructor(props) {
         super(props)
-
+        let loggedIn = false
         this.state = {
             username: '',
-            password: ''
+            password: '',
+            loggedIn
         }
 
         this.changeUserNameHandler = this.changeUserNameHandler.bind(this);
@@ -32,7 +33,15 @@ class CreateHomeComponent extends Component {
         console.log('Auth =>' + JSON.stringify(Auth));
 
         AuthService.checkAuth(Auth).then(res => {
-            console.log('success');
+            if (res.data.id) {
+                console.log(res.data.id);
+                console.log("success");
+                this.setState({
+                    loggedIn: true
+                })
+            } else {
+                alert("Invalid credentials");
+            }
         });
 
     }
@@ -47,6 +56,10 @@ class CreateHomeComponent extends Component {
 
 
     render() {
+
+        if(this.state.loggedIn){
+            return <Redirect to="/CreateSessionComponent" />
+        }
         return (<>
             <div style={{ backgroundColor: "#116466" }}>
                 <Navbar />
@@ -103,14 +116,14 @@ class CreateHomeComponent extends Component {
                                                             <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your Valid Password Here" required
                                                                 name="phone"
 
-                                                                value={this.state.password} onChange={this.changePasswordHandler} 
+                                                                value={this.state.password} onChange={this.changePasswordHandler}
                                                                 placeholder="Enter Your Valid Password" />
                                                             {/* <p style={{ color: "red" }}>{errors.phone}</p> */}
 
                                                         </div>
 
                                                         <div class="col-12" style={{ textAlign: "center", color: "White" }}>
-                                                            <NavLink to="./Hospital" class="btn btn-success" onClick={this.saveSession} style={{ background: "#1877F2", padding: "8px 50px" }} >Log In</NavLink><br></br>
+                                                            <NavLink to="./CreateSessionComponent" class="btn btn-success" onClick={this.saveSession} style={{ background: "#1877F2", padding: "8px 50px" }} >Log In</NavLink><br></br>
 
                                                             <div class="col-12 " style={{ textAlign: "center", color: "White", padding: "12px 12px" }}>
                                                                 <NavLink to="/ForgotPasswordComponent">  <a forgot_password="" href="/login/forget">Forgot Password ?</a><br />  </NavLink>
@@ -166,7 +179,7 @@ class CreateHomeComponent extends Component {
                                         <div class="card-body" style={{ backgroundColor: "#D2B4DE" }}>
 
                                             <h5 class="card-title" style={{ textAlign: "center" }}><strong>Do not wait. Vaccinate!</strong></h5>
-                                            <p class="card-text" style={{ textAlign: "center" }}>Protect yourself and your loved ones. Get your flu shot now.</p><br />
+                                            <p class="card-text" style={{ textAlign: "center" }}>Protect yourself and your loved ones. Get your flu shot now.</p>
                                             {/* <NavLink to="/SignUp" class="btn btn-primary d-flex justify-content-center">REGISTER HERE</NavLink> */}
                                             <NavLink to="/DontWaitVaccinate" class="btn btn-primary d-flex justify-content-center">MORE INFORMATION</NavLink>
                                         </div>
@@ -185,9 +198,6 @@ class CreateHomeComponent extends Component {
                                     </div>
                                 </div>
                             </div>
-
-
-
                         </div>
                     </div>
                 </div>

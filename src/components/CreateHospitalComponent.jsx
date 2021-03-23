@@ -71,10 +71,10 @@ class CreateHospitalComponent extends Component {
         return (<>
 
             <div style={{ backgroundColor: "#116466" }} >
-               <Navbar />
+                <Navbar />
                 <div style={{ textAlign: "center", margin: "00px", color: "#F8F9F9" }}><h1><strong>Hospital Registration</strong></h1></div>
 
-                <form class="row g-3" style={{ padding: "48px",width:"100%" }} >
+                <form class="row g-3" style={{ padding: "48px", width: "100%" }} >
 
                     <div class="col-md-3" style={{ color: "#F8F9F9" }}>
                         <label for="validationDefault01" class="form-label">Organization</label>
@@ -105,9 +105,9 @@ class CreateHospitalComponent extends Component {
 
                     <div class="col-md-3" style={{ color: "#F8F9F9" }}>
                         <label for="exampleFormControlTextarea1" class="form-label">Address</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" 
-                        value={this.state.hspAdd} onChange={this.changeAddressHandler}>
-                            
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"
+                            value={this.state.hspAdd} onChange={this.changeAddressHandler}>
+
                         </textarea>
                     </div>
 
@@ -131,6 +131,10 @@ class CreateHospitalComponent extends Component {
                     <div class="col-12" style={{ textAlign: "center" }}>
                         {/* <NavLink to="/Login" class="btn btn-primary ">SUBMIT</NavLink> */}
                         <NavLink to="/Home" class="btn btn-success" onClick={this.saveHosp} style={{ background: "#1877F2", padding: "6px 24px" }} >Submit</NavLink>
+                    </div>
+
+                    <div class="col-12" style={{ textAlign: "center", color: "White", padding: "12px 12px" }}>
+                        <NavLink to="/HospitalLoginComponent" class="btn btn-success" style={{ background: "#5c7b90", padding: "6px 24px" }} >Hospital Login</NavLink><br></br>
                     </div>
 
                 </form>
