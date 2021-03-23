@@ -11,7 +11,6 @@ import DontWaitVaccinate from "./DontWaitVaccinate";
 import VaccinesWork from "./VaccinesWork";
 import Contact from "./Contact";
 import About from "./About";
-import Hospital from "./Hospital";
 import Carousel1 from "./Corousel";
 import ListPatientComponent from './components/ListPatientComponent';
 import CreatePatientComponent from './components/CreatePatientComponent';
@@ -41,7 +40,6 @@ const App = () => {
                 <Route exact path="/VaccinesWork" component={VaccinesWork} />
                 <Route exact path="/Contact" component={Contact} />
                 <Route exact path="/About" component={About} />
-                <Route exact path="/Hospital" component={Hospital} />
                 <Route exact path="/Carousel1" component={Carousel1} />
                 <Route exact path="/GoogleMap" component={GoogleMap} />
                 <Route exact path="/admin" component={ListPatientComponent} />
