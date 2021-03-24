@@ -61,7 +61,7 @@ class CreateHomeComponent extends Component {
             return <Redirect to="/CreateSessionComponent" />
         }
         return (<>
-            <div style={{ backgroundColor: "#116466" }}>
+            <div style={{ backgroundColor: "#116466", height:"800px",maxHeight:"100%"}}>
                 <Navbar />
                 
                 <section id="header" className="d-flex align-items-center" >
@@ -74,7 +74,7 @@ class CreateHomeComponent extends Component {
 
 
                                     <div className="col-md-6 pt-lg-0 order-2 order-lg-1 d-flex justify-content-center flex-column">
-                                        <h3 style={{ color: "#F1C40F" }}><strong>WELCOME TO COVAX.COM</strong></h3>
+                                        <h3 style={{ color: "#F1C40F", paddingTop:"50px" }}><strong>WELCOME TO COVAX.COM</strong></h3>
                                         <h5 style={{ color: "white" }}> <strong> COVID-19 VACCINE INFORMATION</strong>
                                         </h5>
                                         <h2 className="my-3">
