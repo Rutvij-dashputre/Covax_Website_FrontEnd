@@ -21,6 +21,8 @@ import HospitalLoginComponent from './components/HospitalLoginComponent';
 import GoogleMap from './components/GoogleMap';
 import ForgotPasswordComponent from './components/ForgotPasswordComponent';
 import CreateSessionComponent from './components/CreateSessionComponent';
+import CreateHospitalList from './components/CreateHospitalList';
+
 
 const App = () => {
     return (
@@ -29,6 +31,7 @@ const App = () => {
             <Switch>
                 <Route exact path="/" component={CreateHomeComponent} />
                 <Route exact path="/CreatePatientComponent" component={CreatePatientComponent} />
+                <Route exact path="/CreateHospitalList" component={CreateHospitalList} />
                 <Route exact path="/CreateSessionComponent" component={CreateSessionComponent} />
                 <Route exact path="/ForgotPasswordComponent" component={ForgotPasswordComponent} />
                 <Route exact path="/CreateHospitalComponent" component={CreateHospitalComponent} />

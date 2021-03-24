@@ -1,83 +1,70 @@
 import React, { Component } from 'react';
-/* import ResetService from '../services/PasswordResetService';  */
-
+import SendPin from '../services/SendPinService'; 
+import { NavLink , Redirect } from 'react-router-dom';
 import Navbar from "../Navbar";
 
 class CreateSessionComponent extends Component {
     constructor(props) {
         super(props)
-
+        let loggedIn = false
         this.state = {
            
-          /*   email: '',
-            */
+            pincode: 0,
+            loggedIn
         }
-      
-     /*    this.changeEmailHandler = this.changeEmailHandler.bind(this);
-        this.sendMail = this.sendMail.bind(this); */
+        this.changePinHandler = this.changePinHandler.bind(this);
+        this.sendDetails = this.sendDetails.bind(this);
 
     }
 
-   /*  sendMail = (e) => {
+    sendDetails = (e) => {
         e.preventDefault();
-        let mail = {
-           email: this.state.email
+        let pin = {
+            pincode: this.state.pincode
         };
-        console.log('mail =>' + JSON.stringify(mail));
+        console.log('pin =>' + JSON.stringify(pin));
 
-        ResetService.reset(mail).then(res => {
-            alert('Mail sent');
+        SendPin.send(pin).then(res => {
+            console.log('pin sent' + res.data.pin);
+            if (res.data) {
+                
+                console.log("success");
+                this.setState({
+                    loggedIn: true
+                })
+            } else {
+                alert("Invalid pincode");
+            }
         });
 
     }
     
-    changeEmailHandler = (event) => {
-        this.setState({ email: event.target.value });
-    } */
+    changePinHandler = (event) => {
+        this.setState({ pincode: event.target.value });
+    }
 
     render() {
+        if(this.state.loggedIn){
+            return <Redirect to="/CreateHospitalList" />
+        }
         return (<>
 
             <div style={{ backgroundColor: "#116466" }} >
                 <Navbar />
-                <div style={{ textAlign: "center", margin: "50px", color: "#F8F9F9" }}><h1><strong>Patient Details</strong></h1></div>
+                <div className="col-md-3" style={{ textAlign: "center", margin: "50px", color: "#F8F9F9" }}><h1><strong>Patient Details</strong></h1></div>
     
-                <form class="row g-3" style={{ padding: "48px" }} >
+                <form class="col-md-12" style={{ padding: "48px" }} >
     
-                    <div class="col-md-3" style={{ color: "#F8F9F9" }}>
-                        <label for="validationDefault01" class="form-label">Name of Patient</label>
-                        <input type="text" class="form-control" id="validationDefault01" placeholder="Enter Your Name Here" required />
-                    </div>
-    
-    
-    
-                    <div class="col-md-3" style={{ color: "#F8F9F9 " }}>
-                        <label for="exampleFormControlInput1" class="form-label">Time</label>
-                        <input type="number" class="form-control" id="exampleFormControlInput1" />
+                    <div /* className="col-md-6" */ style={{  textAlign: "center" ,color: "#F8F9F9 " }}>
+                        <label for="exampleFormControlInput1" class="form-label">Pin Code</label>
+                        <input type="number" class="form-control" id="exampleFormControlInput1"
+                        value={this.state.pincode} onChange={this.changePinHandler} />
     
                     </div>
     
-    
-                    <div class="col-md-3" style={{ color: "#F8F9F9 " }}>
-                        <label for="exampleFormControlInput1" class="form-label">Available Date</label>
-                        <input type="date" class="form-control" id="exampleFormControlInput1" />
-    
-                    </div>
-    
-    
-                {/*     <div class="col-md-3" style={{ color: "#F8F9F9" }}>
-                        <label for="validationDefault04" class="form-label">Vaccine</label>
-                        <select class="form-select" id="validationDefault04" required>
-                            <option selected disabled value="">Select</option>
-                            <option>Yes</option>
-                            <option>No</option>
-    
-                        </select>
-                    </div> */}
-    
-                    <div class="col-12" style={{ textAlign: "center" }}>
+                    <div className="col-12" style={{ textAlign: "center" }}>
                         {/* <NavLink to="/Login" class="btn btn-primary ">SUBMIT</NavLink> */}
-                        <button class="btn btn-primary" type="submit">Submit</button>
+                        <NavLink  type="reset" to="/CreateHospitalList" class="btn btn-success" onClick={this.sendDetails} style={{ background: "#1877F2", padding: "6px 24px"  }} >Submit</NavLink>
                     </div>
     
                 </form>

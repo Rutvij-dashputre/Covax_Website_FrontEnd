@@ -26,7 +26,7 @@ class ForgotPasswordComponent extends Component {
         console.log('mail =>' + JSON.stringify(mail));
 
         ResetService.reset(mail).then(res => {
-            alert('Mail sent');
+            console.log('Mail sent' + res.data);
         });
 
     }
@@ -52,7 +52,7 @@ class ForgotPasswordComponent extends Component {
 
                     <div className="col-12" style={{ textAlign: "center" }}>
                         {/* <NavLink to="/Login" class="btn btn-primary ">SUBMIT</NavLink> */}
-                        <NavLink to="/PasswordResetComponent" class="btn btn-success" onClick={this.sendMail} style={{ background: "#1877F2", padding: "6px 24px" }} >Submit</NavLink>
+                        <NavLink  type="reset" to="/PasswordResetComponent" class="btn btn-success" onClick={this.sendMail} style={{ background: "#1877F2", padding: "6px 24px"  }} >Submit</NavLink>
                     </div>
                    
 

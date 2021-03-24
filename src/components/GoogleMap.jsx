@@ -12,7 +12,7 @@ class GoogleMap extends Component {
         activeMarker: {},
         selectedPlace: {},
         pincode: ''
-       
+
     };
 
     onMarkerClick = (props, marker, e) =>
@@ -106,23 +106,32 @@ class GoogleMap extends Component {
 
 
                     </div>
-                    <div className="d-none d-md-block col-md-6 d-flex " style={{ backgroundColor: "#116466" }}>
-                        <div className="col-md-6" style={{ color: "#F8F9F9", paddingTop: "20vh", paddingBottom: "20vh" }}>
-                            {/* <label for="exampleFormControlInput1" class="form-label">Search for vaccines </label> */}
-                            {/*  <input type="text" class="form-control" id="exampleFormControlInput1"
-                                placeholder="Enter Place/Pincode" /> */}
-                            <input type="text" class="form-control" id="validationDefault01" placeholder="Enter Pincode"
-                            value={this.state.pincode} onChange={this.changePincodeHandler}/>
 
-                            <br />
-                            <div style={{ textAlign: "center" }}>
-                                {/* <NavLink to="/Login" class="btn btn-primary ">SUBMIT</NavLink> */}
-                                <button class="btn btn-primary" onClick={this.onMarkerClick} type="submit">Go</button>
-                            </div>
-                        </div><br />
+                </div>
+                <br />
+                <br />
+
+                <br />
+                <br />
+
+                <div> <div className="d-none d-md-block col-md-6 d-flex " style={{ backgroundColor: "#116466" }}>
+                    <div className="col-md-6" style={{ color: "#F8F9F9", paddingTop: "20vh", paddingBottom: "20vh" }}>
+                        {/* <label for="exampleFormControlInput1" class="form-label">Search for vaccines </label> */}
+                        {/*  <input type="text" class="form-control" id="exampleFormControlInput1"
+                                placeholder="Enter Place/Pincode" /> */}
+                        <input type="text" class="form-control" id="validationDefault01" placeholder="Enter Pincode"
+                            value={this.state.pincode} onChange={this.changePincodeHandler} />
+
+                        <br />
+                        <div style={{ textAlign: "center" }}>
+                            {/* <NavLink to="/Login" class="btn btn-primary ">SUBMIT</NavLink> */}
+                            <button class="btn btn-primary" onClick={this.onMarkerClick} type="submit">Go</button>
+                        </div>
+                    </div><br />
 
                     </div>
                 </div>
+
             </div>
 
 

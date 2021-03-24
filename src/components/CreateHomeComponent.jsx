@@ -63,7 +63,7 @@ class CreateHomeComponent extends Component {
         return (<>
             <div style={{ backgroundColor: "#116466" }}>
                 <Navbar />
-
+                
                 <section id="header" className="d-flex align-items-center" >
                     <div className="container-fluid nav_bg" >
 

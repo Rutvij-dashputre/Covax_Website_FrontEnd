@@ -14,7 +14,7 @@ class CreateHospitalComponent extends Component {
             username: '',
             password: '',
             hspAdd: '',
-            pinCode: ''
+            pincode: ''
         }
         this.changeNameHandler = this.changeNameHandler.bind(this);
         this.changeEmailHandler = this.changeEmailHandler.bind(this);
@@ -32,7 +32,7 @@ class CreateHospitalComponent extends Component {
         let hospital = {
             name: this.state.name, email: this.state.email, username: this.state.username,
             password: this.state.password,
-            hspAdd: this.state.hspAdd, pinCode: this.state.pinCode
+            hspAdd: this.state.hspAdd, pincode: this.state.pincode
 
         };
         console.log('hospital =>' + JSON.stringify(hospital));
@@ -63,7 +63,7 @@ class CreateHospitalComponent extends Component {
     }
 
     changePinCodeHandler = (event) => {
-        this.setState({ pinCode: event.target.value });
+        this.setState({ pincode: event.target.value });
     }
 
 
@@ -116,7 +116,7 @@ class CreateHospitalComponent extends Component {
                     <div className="col-md-3" style={{ color: "#F8F9F9 " }}>
                         <label htmlFor="exampleFormControlInput1" className="form-label">Pin Code</label>
                         <input type="number" className="form-control" id="exampleFormControlInput1"
-                            value={this.state.pinCode} onChange={this.changePinCodeHandler} />
+                            value={this.state.pincode} onChange={this.changePinCodeHandler} />
 
                     </div>
 

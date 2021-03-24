@@ -6,12 +6,12 @@ import { BrowserRouter } from "react-router-dom";
 
 import Footer from './Footer';
 
+
 ReactDOM.render(
   <>
     <BrowserRouter>
       <App />
       <Footer />
-
     </BrowserRouter>
   </>,
   document.getElementById('root')
