@@ -14,7 +14,8 @@ class CreateSessionComponent extends Component {
             apDate: '',
             time: '',
             ptId: 3,
-            hspId: ''
+            hspId: '',
+            email: ''
         }
 
         this.state = {
@@ -27,6 +28,7 @@ class CreateSessionComponent extends Component {
         this.changeDateHandler = this.changeDateHandler.bind(this);
         this.changeHspIdHandler = this.changeHspIdHandler.bind(this);
         this.changePtIdHandler = this.changePtIdHandler.bind(this);
+        this.changeEmailHandler = this.changeEmailHandler.bind(this);
 
         this.savePatient = this.savePatient.bind(this);
         this.sendDetails = this.sendDetails.bind(this);
@@ -58,7 +60,8 @@ class CreateSessionComponent extends Component {
             apDate: this.state.apDate,
             time: this.state.time,
             ptId: this.state.ptId,
-            hspId: this.state.hspId
+            hspId: this.state.hspId,
+            email: this.state.email
         };
         console.log('data =>' + JSON.stringify(appointment));
 
@@ -93,6 +96,11 @@ class CreateSessionComponent extends Component {
     changePtIdHandler = (event) => {
         this.setState({ ptId: event.target.value });
     }
+
+    changeEmailHandler = (event) => {
+        this.setState({ email: event.target.value });
+    }
+
 
 
     render() {
@@ -209,6 +217,13 @@ class CreateSessionComponent extends Component {
                             <label for="exampleFormControlInput1" class="form-label">Patient Id</label>
                             <input type="number" class="form-control" id="exampleFormControlInput1"
                                 value={this.state.ptId} onChange={this.changePtIdHandler} />
+
+                        </div>
+
+                        <div class="col-md-3" style={{ color: "#F8F9F9 " }}>
+                            <label for="exampleFormControlInput1" class="form-label">Enter Email Id</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1"
+                                value={this.state.email} onChange={this.changeEmailHandler} />
 
                         </div>
 

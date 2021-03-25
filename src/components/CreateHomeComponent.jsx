@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import AuthService from '../services/AuthService';
-import { NavLink , Redirect } from 'react-router-dom';
+import { NavLink, Redirect } from 'react-router-dom';
 import Navbar from "../Navbar";
 import img1 from "../Images/commuimmu.jpg"
 import img2 from "../Images/dontwait.jpg"
@@ -57,13 +57,17 @@ class CreateHomeComponent extends Component {
 
     render() {
 
-        if(this.state.loggedIn){
+        if (this.state.loggedIn) {
             return <Redirect to="/CreateSessionComponent" />
         }
         return (<>
-            <div style={{ backgroundColor: "#116466", height:"800px",maxHeight:"100%"}}>
+            <div style={{ backgroundColor: "#116466", height: "800px", maxHeight: "100%" }}>
                 <Navbar />
-                
+                <div class="col-12" style={{ textAlign: "right", color: "White", padding: "12px 12px" }}>
+                    <NavLink to="/CreateAdminLoginComponent" class="btn btn-success" style={{ background: "#5c7b90", padding: "6px 24px" }} >Admin Login</NavLink><br></br>
+                </div>
+
+
                 <section id="header" className="d-flex align-items-center" >
                     <div className="container-fluid nav_bg" >
 
@@ -74,7 +78,7 @@ class CreateHomeComponent extends Component {
 
 
                                     <div className="col-md-6 pt-lg-0 order-2 order-lg-1 d-flex justify-content-center flex-column">
-                                        <h3 style={{ color: "#F1C40F", paddingTop:"50px" }}><strong>WELCOME TO COVAX.COM</strong></h3>
+                                        <h3 style={{ color: "#F1C40F", paddingTop: "50px" }}><strong>WELCOME TO COVAX.COM</strong></h3>
                                         <h5 style={{ color: "white" }}> <strong> COVID-19 VACCINE INFORMATION</strong>
                                         </h5>
                                         <h2 className="my-3">

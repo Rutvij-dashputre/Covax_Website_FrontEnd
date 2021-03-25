@@ -14,6 +14,7 @@ class PatientService {
     createPatient(patient) {
         return axios.post(PATIENT_API_POSTING_URL, patient,{headers: headers});
     }
+
 }
 
 export default new PatientService();

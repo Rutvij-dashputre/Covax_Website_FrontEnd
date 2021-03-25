@@ -1,3 +1,4 @@
+
 import axios from 'axios';
 
 const HOSPITAL_API_POSTING_URL = 'http://localhost:8080/hospital/register';

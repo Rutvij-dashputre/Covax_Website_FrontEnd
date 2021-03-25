@@ -20,7 +20,8 @@ import HospitalLoginComponent from './components/HospitalLoginComponent';
 import GoogleMap from './components/GoogleMap';
 import ForgotPasswordComponent from './components/ForgotPasswordComponent';
 import CreateSessionComponent from './components/CreateSessionComponent';
-
+import HospSessionComponent from './components/HospSessionComponent';
+import CreateAdminLoginComponent from './components/CreateAdminLoginComponent';
 
 
 const App = () => {
@@ -30,6 +31,8 @@ const App = () => {
             <Switch>
                 <Route exact path="/" component={CreateHomeComponent} />
                 <Route exact path="/CreatePatientComponent" component={CreatePatientComponent} />
+                <Route exact path="/CreateAdminLoginComponent" component={CreateAdminLoginComponent} />
+                <Route exact path="/HospSessionComponent" component={HospSessionComponent} />
                 <Route exact path="/CreateSessionComponent" component={CreateSessionComponent} />
                 <Route exact path="/ForgotPasswordComponent" component={ForgotPasswordComponent} />
                 <Route exact path="/CreateHospitalComponent" component={CreateHospitalComponent} />

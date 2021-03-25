@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
 import HospitalLoginService from '../services/HospitalLoginService';
-import { NavLink } from 'react-router-dom';
+import { NavLink , Redirect } from 'react-router-dom';
 import Navbar from "../Navbar";
 
 
 class HospitalLoginComponent extends Component {
     constructor(props) {
         super(props)
-
+        let loggedIn = false
         this.state = {
 
             username: '',
-            password: ''
+            password: '',
+            loggedIn
 
         }
 
@@ -34,6 +35,9 @@ class HospitalLoginComponent extends Component {
             if (res.data.hspId) {
                 console.log(res.data.hspId);
                 console.log("success");
+                this.setState({
+                    loggedIn: true
+                })
             } else {
                 alert("Invalid credentials");
             }
@@ -54,6 +58,9 @@ class HospitalLoginComponent extends Component {
 
 
     render() {
+        if(this.state.loggedIn){
+            return <Redirect to="/HospSessionComponent" />
+        }
         return (<>
 
             <div style={{ backgroundColor: "#116466" }} >
@@ -87,7 +94,7 @@ class HospitalLoginComponent extends Component {
                     </div>
 
                     <div class="col-12" style={{ textAlign: "center", color: "White" }}>
-                        <NavLink to="./Hospital" class="btn btn-success" onClick={this.saveSession} style={{ background: "#1877F2", padding: "8px 50px" }} >Log In</NavLink><br></br>
+                        <NavLink to="./HospSessionComponent" class="btn btn-success" onClick={this.saveSession} style={{ background: "#1877F2", padding: "8px 50px" }} >Log In</NavLink><br></br>
 
                         <div class="col-12 " style={{ textAlign: "center", color: "White", padding: "12px 12px" }}>
                             <NavLink to="/ForgotPasswordComponent">  <a forgot_password="" href="/login/forget">Forgot Password ?</a><br />  </NavLink>
