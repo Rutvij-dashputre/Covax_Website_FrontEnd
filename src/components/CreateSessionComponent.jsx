@@ -196,7 +196,7 @@ class CreateSessionComponent extends Component {
 
                             <div class="row-md-3" style={{ color: "#black " }}>
                                 <label for="exampleFormControlInput1" class="form-label">Time</label>
-                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Time Here" required
+                                <input type="time" class="form-control" id="exampleFormControlInput1" placeholder="Enter Time Here" required
                                     value={this.state.time} onChange={this.changeTimeHandler} />
 
                             </div>
@@ -204,7 +204,7 @@ class CreateSessionComponent extends Component {
 
                             <div class="row-md-3" style={{ color: "#black " }}>
                                 <label for="exampleFormControlInput1" class="form-label">Available Date</label>
-                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Date Here" required
+                                <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="Enter Date Here" required
                                     value={this.state.apDate} onChange={this.changeDateHandler} />
 
                             </div>
