@@ -17,11 +17,11 @@ import Navbar from './Navbar';
 const Covid19Info = () => {
     return (<>
 
-<div style={{ backgroundColor: "#116466"}}>
+<div style={{ backgroundColor: "#ffffff"}}>
  
  <Navbar /> 
  </div>
- <div style={{paddingTop:"20vh",backgroundColor: "#116466",color:"white" }}> 
+ <div style={{paddingTop:"20vh",backgroundColor: "#ffffff",color:"black" }}> 
         <section id="header" className="d-flex align-items-center "   >
             <div className="container-fluid nav_bg">
                 <div className="row">

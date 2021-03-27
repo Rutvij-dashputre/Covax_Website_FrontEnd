@@ -67,7 +67,7 @@ class Contact extends React.Component {
             this.state.errors.fullname.length === 0 && this.state.errors.phone.length === 0 &&
             this.state.errors.email.length === 0
         ) {
-            alert("From is Valid");
+            alert("Your response has been recorded");
         }
         else {
             alert("From is not Valid");
@@ -81,7 +81,7 @@ class Contact extends React.Component {
 
         return (<>
 
-            <div style={{ backgroundColor: "#116466" }}>
+            <div style={{ backgroundColor: "white	" }}>
                 <Navbar />
 
                 <section id="header" className="d-flex align-items-center"  >
@@ -96,15 +96,15 @@ class Contact extends React.Component {
                             <div className="col-md-6 pt-lg-0 order-2 order-lg-1 d-flex justify-content-center flex-column" style={{ margin: "top-30px" }}
                             >
 
-                                <h5 className="my-3" style={{ textAlign: "center" }}>
-                                    <strong className="brand-name" style={{ color: "#F8F9F9" }}>Address:<br></br>
+                                <h4 className="my-3" style={{ textAlign: "center" }}>
+                                    <h5 className="brand-name" style={{ color: "#185394" }}><h3><strong>Address:</strong></h3><br></br>
                               COVAX, Mumbai <br></br>
                               Raintree Marg, Near Bharati Vidyapeeth,<br />
                               Opp. Kharghar Railway Station, Sector 7, <br />
                               CBD Belapur Navi Mumbai - 400 614. Maharashtra.<br />
                               Contact: +91 7588821147 <br />
-                              Email: covax@gmail.com</strong>
-                                </h5>
+                              Email: covax@gmail.com</h5>
+                                </h4>
 
                             </div>
                             <div className="col-md-6 order-1 order-lg-2 ">
@@ -114,7 +114,7 @@ class Contact extends React.Component {
                                         <div className="col-md-6 col-6 mx-auto">
                                             <form onSubmit={this.submitHandler}>
 
-                                                <div class="mb-3" style={{ color: "#F8F9F9" }}>
+                                                <div class="mb-3" style={{ color: "black" }}>
                                                     <label for="validationDefault01" class="form-label">Full Name</label>
                                                     <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your Full Name Here" required
                                                         name="fullname"
@@ -126,7 +126,7 @@ class Contact extends React.Component {
 
                                                 </div>
 
-                                                <div class="mb-3" style={{ color: "#F8F9F9" }}>
+                                                <div class="mb-3" style={{ color: "black" }}>
                                                     <label for="validationDefault01" class="form-label">Contact Number</label>
                                                     <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your Contact No Here" required
                                                         name="phone"
@@ -137,7 +137,7 @@ class Contact extends React.Component {
 
                                                 </div>
 
-                                                <div class="mb-3" style={{ color: "#F8F9F9" }}>
+                                                <div class="mb-3" style={{ color: "black" }}>
                                                     <label for="validationDefault01" class="form-label">Email address</label>
                                                     <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your Email Here" required
                                                         name="email"
@@ -147,7 +147,7 @@ class Contact extends React.Component {
                                                     <p style={{ color: "red" }}>{errors.email}</p>
 
                                                 </div>
-                                                <div class="mb-3" style={{ color: "#F8F9F9" }}>
+                                                <div class="mb-3" style={{ color: "#black" }}>
                                                     <label for="validationDefault01" class="form-label">Message</label>
                                                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Enter Your Message Here" required
                                                         name="msg"
@@ -158,9 +158,9 @@ class Contact extends React.Component {
                                                 </div>
 
                                                 <div class="col-12" style={{ textAlign: "center", color: "White" }}>
-                                                    <button class="btn btn-primary" type="submit"  >Submit</button>
+                                                    <button class="btn btn-primary" type="submit" >Submit</button>
 
-                                                </div>
+                                                </div><br />
 
                                             </form>
                                         </div>

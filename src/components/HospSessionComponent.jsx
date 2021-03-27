@@ -26,12 +26,12 @@ class HospSessionComponent extends Component {
 
     }
 
-    
+
     confirmApp(email) {
         Confirm.confirmation(email).then(res => {
-            this.setState({patient: this.state.patient.filter(patient => patient.email !== email)});
+            this.setState({ patient: this.state.patient.filter(patient => patient.email !== email) });
         });
-         
+
     }
 
 
@@ -49,18 +49,16 @@ class HospSessionComponent extends Component {
 
     }
 
-   /*  confirmApp = (e) => {
-        e.preventDefault();
-        let emailId = {
-            email: this.state.email
-        };
-        console.log('emailId =>' + JSON.stringify(emailId));
-
-        HospSession.confirm(emailId).then(res => {
-            console.log('app confirm' + JSON.stringify(res.data));
-        });
-
-    } */
+    /*  confirmApp = (e) => {
+         e.preventDefault();
+         let emailId = {
+             email: this.state.email
+         };
+         console.log('emailId =>' + JSON.stringify(emailId));
+         HospSession.confirm(emailId).then(res => {
+             console.log('app confirm' + JSON.stringify(res.data));
+         });
+     } */
 
 
 
@@ -73,14 +71,17 @@ class HospSessionComponent extends Component {
     render() {
         return (<>
 
-            <div style={{ backgroundColor: "#116466" }} >
+            <div style={{ backgroundColor: "#white" }} >
                 <Navbar />
-                <div style={{ textAlign: "center", margin: "50px", color: "#F8F9F9" }}><h1><strong>Display Appointments</strong></h1></div>
+                <div class="col-12" style={{ textAlign: "right", color: "black", padding: "12px 12px" }}>
+                    <NavLink to="/CreateHomeComponent" class="btn btn-success" style={{ background: "#5c7b90" }} >Logout</NavLink><br></br>
+                </div>
+                <div style={{ textAlign: "center", marginTop: "50px", color: "#black" }}><h1><strong>Display Appointments</strong></h1></div>
 
-                <form className="row g-3 " style={{ padding: "48px" }} >
+                <form className="row g-3 " style={{ padding: "45px" }} >
 
-                    <div className="col-md-3 " style={{ marginLeft: "38%", color: "#F8F9F9" }}>
-                        <label for="exampleFormControlInput1" className="form-label">Enter hospital Id</label>
+                    <div className="col-md-3 " style={{ marginLeft: "38%", color: "#black" }}>
+                        <label for="exampleFormControlInput1" className="form-label"><strong>Enter hospital Id</strong></label>
                         <input type="text" class="form-control" id="exampleFormControlInput1"
                             placeholder="Enter Hospital Id" value={this.state.hspId} onChange={this.changeIdHandler} />
                     </div>
@@ -121,7 +122,7 @@ class HospSessionComponent extends Component {
                                                     <td>{patient.name}</td>
                                                     <td>{patient.apDate}</td>
                                                     <td>{patient.email}</td>
-                                                    <td> <button className="btn btn-primary btn-sm"  onClick={() => this.confirmApp(patient.email)}>Confirm</button></td>
+                                                    <td> <button className="btn btn-primary btn-sm" onClick={() => this.confirmApp(patient.email)}>Confirm</button></td>
 
 
 
@@ -151,6 +152,3 @@ class HospSessionComponent extends Component {
 }
 
 export default HospSessionComponent;
-
-
-

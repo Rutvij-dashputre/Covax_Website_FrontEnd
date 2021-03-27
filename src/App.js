@@ -17,7 +17,6 @@ import CreateHospitalComponent from './components/CreateHospitalComponent';
 import CreateHomeComponent from './components/CreateHomeComponent';
 import PasswordResetComponent from './components/PasswordResetComponent';
 import HospitalLoginComponent from './components/HospitalLoginComponent';
-import GoogleMap from './components/GoogleMap';
 import ForgotPasswordComponent from './components/ForgotPasswordComponent';
 import CreateSessionComponent from './components/CreateSessionComponent';
 import HospSessionComponent from './components/HospSessionComponent';
@@ -45,7 +44,6 @@ const App = () => {
                 <Route exact path="/Contact" component={Contact} />
                 <Route exact path="/About" component={About} />
                 <Route exact path="/Carousel1" component={Carousel1} />
-                <Route exact path="/GoogleMap" component={GoogleMap} />
                 <Route exact path="/admin" component={ListPatientComponent} />
                 <Redirect to="/" />
             </Switch>

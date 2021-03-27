@@ -21,7 +21,7 @@ function Footer() {
 
         <div className='footer-container'>
             <div>
-                {/* <FontAwesomeIcon icon={fab} /> */}
+                
             </div>
             <section className='footer-subscription'>
                 <p className='footer-subscription-heading'>
@@ -30,7 +30,7 @@ function Footer() {
                 <p className='footer-subscription-text'>
                     You can unsubscribe at any time.
         </p>
-                <div className='input-areas' >
+               {/*  <div className='input-areas' >
                     <form>
                         <input
                             className='footer-input'
@@ -39,8 +39,9 @@ function Footer() {
                             placeholder='Your Email'
                         />
 
+                       
                     </form>
-                </div>
+                </div> */}
             </section>
             <div className='footer-links'>
                 <div className='footer-link-wrapper'>
@@ -51,15 +52,12 @@ function Footer() {
                     </div>
                     <div className='footer-link-items'>
                         <h2>Contact Us</h2>
-                        <Link to='/'>Contact</Link>
+                        <Link to='/'>Contact</Link><br />
                         <Link to='/'>Support</Link>
                     </div>
                 </div>
-                <div className='footer-link-wrapper'>
-                  {/*   <div className='footer-link-items'>
-                        <h2>Videos</h2>
-                        <Link to='/'>Agency</Link>
-                    </div> */}
+                {/* <div className='footer-link-wrapper'>
+                 
                     <div className='footer-link-items'>
                         <h2>Social Media</h2>
                         <Link to='/'>
@@ -90,7 +88,27 @@ function Footer() {
 
                         </Link>
                     </div>
-                </div>
+                </div> */}
+<div className='footer-link-wrapper'>
+<div className='footer-link-items'>
+      <h2>Social Follow</h2>
+      <a href="https://www.youtube.com"
+  className="youtube social">
+  <FontAwesomeIcon icon={faYoutube} size="2x" />
+</a>
+<a href="https://www.facebook.com"
+  className="facebook social">
+  <FontAwesomeIcon icon={faFacebook} size="2x" />
+</a>
+<a href="https://www.twitter.com" className="twitter social">
+  <FontAwesomeIcon icon={faTwitter} size="2x" />
+</a>
+<a href="https://www.instagram.com"
+  className="instagram social">
+  <FontAwesomeIcon icon={faInstagram} size="2x" />
+</a>
+</div>
+</div>
             </div>
             <section className='social-media'>
                 <div className='social-media-wrap'>
@@ -108,5 +126,7 @@ function Footer() {
         </div>
     );
 }
+
+
 
 export default Footer;

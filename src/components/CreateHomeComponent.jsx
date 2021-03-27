@@ -61,12 +61,11 @@ class CreateHomeComponent extends Component {
             return <Redirect to="/CreateSessionComponent" />
         }
         return (<>
-            <div style={{ backgroundColor: "#116466", height: "800px", maxHeight: "100%" }}>
+            <div style={{ backgroundColor: "#636466	" }}>
                 <Navbar />
                 <div class="col-12" style={{ textAlign: "right", color: "White", padding: "12px 12px" }}>
-                    <NavLink to="/CreateAdminLoginComponent" class="btn btn-success" style={{ background: "#5c7b90", padding: "6px 24px" }} >Admin Login</NavLink><br></br>
+                    <NavLink to="/CreateAdminLoginComponent" class="btn btn-success" style={{  padding: "6px 24px" }} >Admin Login</NavLink><br></br>
                 </div>
-
 
                 <section id="header" className="d-flex align-items-center" >
                     <div className="container-fluid nav_bg" >
@@ -78,12 +77,11 @@ class CreateHomeComponent extends Component {
 
 
                                     <div className="col-md-6 pt-lg-0 order-2 order-lg-1 d-flex justify-content-center flex-column">
-                                        <h3 style={{ color: "#F1C40F", paddingTop: "50px" }}><strong>WELCOME TO COVAX.COM</strong></h3>
-                                        <h5 style={{ color: "white" }}> <strong> COVID-19 VACCINE INFORMATION</strong>
+                                        <h3 style={{ color: "white" }}><strong>"Your best shot at good health"</strong></h3>
+                                        <h5 style={{ color: "black" }}> <strong> Get yourself vaccinated ! !</strong>
                                         </h5>
-                                        <h2 className="my-3">
-                                            <strong className="brand-name">Things to Know about the COVID-19 Vaccination Program..</strong>
-                                        </h2>
+                                        <h4 style={{ color: "white" }}>Things to Know about the COVID-19 Vaccination Program..</h4>
+
 
                                         <div className="mt-3">
                                             <NavLink to="/Covid19Info" className="btn-get-started">
@@ -102,25 +100,28 @@ class CreateHomeComponent extends Component {
                                                 <div className="col-md-6 col-6 mx-auto">
                                                     <form onSubmit={this.submitHandler}>
 
-                                                        {/*  <div style={{ textAlign: "center", color: "White" }}><strong><h2 style={{  color: "White" }}>LOGIN HERE</h2></strong></div><br/> */}
-                                                        <div class="mb-3" style={{ color: "#F8F9F9" }}>
+
+                                                        <div class="mb-3 border-border-primary" style={{ color: "#black" }}>
                                                             <label for="validationDefault01" class="form-label"><strong>Username</strong></label>
                                                             <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your Full Name Here" required
                                                                 name="username"
-
+                                                                
+                                                               
                                                                 value={this.state.username} onChange={this.changeUserNameHandler}
-
+                                                              
                                                                 placeholder="Enter Your Username" />
                                                             {/* <p style={{ color: "red" }}>{errors.username}</p> */}
 
                                                         </div>
 
-                                                        <div class="mb-3" style={{ color: "#F8F9F9" }}>
+                                                        <div class="mb-3" style={{ color: "#black" }}>
                                                             <label for="validationDefault01" class="form-label"><strong>Password</strong></label>
-                                                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your Valid Password Here" required
-                                                                name="phone"
-
+                                                            <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your Valid Password Here" required
+                                                                name="password"
+                                                               
+                                                                
                                                                 value={this.state.password} onChange={this.changePasswordHandler}
+                                                                
                                                                 placeholder="Enter Your Valid Password" />
                                                             {/* <p style={{ color: "red" }}>{errors.phone}</p> */}
 
@@ -159,12 +160,13 @@ class CreateHomeComponent extends Component {
 
                 </section>
             </div>
+            <br /> <br />
 
             <div>
                 <div className="container-fluid mb-5">
                     <div className="row">
                         <div className="col-10 mx-auto">
-                            <div className="row gy-4">
+                            <div className="row gy-4" >
                                 <div className="col-md-3 col-10 mx-auto">
                                     <div class="card">
                                         <img src={img1} class="card-img-top" alt="..." />

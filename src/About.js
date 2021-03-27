@@ -7,7 +7,7 @@ const About = () => {
 
 
 
-        <div style={{ backgroundColor: "#116466", color: "white" }}>
+        <div style={{ backgroundColor: "white", color: "black" }}>
             <div class="outer-div"><div class="inner-div"></div></div>
 
             <Navbar />
@@ -18,25 +18,21 @@ const About = () => {
                         <div className="col-10 mx-auto">
                             <div className="row">
                                 <div className="col-md-12 pt-lg-0 order-2 order-lg-1 d-flex justiy-content-center flex-column">
-                                    <h3 className="text-center" style={{ color: "red" }}> <strong >About Us  </strong>
+                                    <h3 className="text-center" style={{ color: "#185394" }}> <strong >About Us  </strong>
                                     </h3><br />
 
+                                    <h6 style={{ textAlign: "justify", color: "#D35400 " }}> <span> <strong> Our Mission </strong><br /></span></h6><br />
+                                    <h6 style={{ textAlign: "justify" }}>Covax.com offers reliable, easy-to-understand information from the federal government on vaccines, immunizations, and vaccine-preventable diseases.
 
-                                    <h6 style={{ textAlign: "justify" }}> <span><strong> <h2>Our Mission </h2></strong><br />
-
-                                    Covax.com offers reliable, easy-to-understand information from the federal government on vaccines, immunizations, and vaccine-preventable diseases.
-
-Whether you want trusted vaccination information for yourself, a loved one, or others in your community, we can help you find what you need. <br />  </span></h6><br />
-
+Whether you want trusted vaccination information for yourself, a loved one, or others in your community, we can help you find what you need.<br></br><br /></h6>
 
                                     <h6 style={{ textAlign: "justify", color: "#D35400 " }}> <span><strong>Disclaimer</strong> <br />  </span></h6><br />
 
                                     <h6 style={{ textAlign: "justify" }}>Covax.com offers health information for your general knowledge. The information on this site does not replace professional medical advice, diagnosis, or treatment.<br />
-
                                     If you have questions about your health, talk with your doctor or other health care provider <br></br>
                                         <br /></h6>
 
-                                    <h6 style={{ textAlign: "justify", color: "#D35400 " }}> <span><strong>How to share our information ?</strong> <br />  </span></h6>
+                                    <h6 style={{ textAlign: "justify", color: "#D35400 " }}> <span><strong>How to share our information ?</strong> <br />  </span></h6><br />
 
                                     <h6 style={{ textAlign: "justify" }}> We encourage you to share information from our site with your friends, family, patients, or website users.
 

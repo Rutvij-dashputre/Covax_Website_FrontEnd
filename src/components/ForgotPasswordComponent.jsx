@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ResetService from '../services/PasswordResetService'; 
+import ResetService from '../services/PasswordResetService';
 import { NavLink } from 'react-router-dom';
 import Navbar from "../Navbar";
 
@@ -8,11 +8,11 @@ class ForgotPasswordComponent extends Component {
         super(props)
 
         this.state = {
-           
+
             email: '',
-           
+
         }
-      
+
         this.changeEmailHandler = this.changeEmailHandler.bind(this);
         this.sendMail = this.sendMail.bind(this);
 
@@ -21,16 +21,16 @@ class ForgotPasswordComponent extends Component {
     sendMail = (e) => {
         e.preventDefault();
         let mail = {
-           email: this.state.email
+            email: this.state.email
         };
         console.log('mail =>' + JSON.stringify(mail));
 
         ResetService.reset(mail).then(res => {
-            console.log('Mail sent' + res.data);
+            alert('Mail sent');
         });
 
     }
-    
+
     changeEmailHandler = (event) => {
         this.setState({ email: event.target.value });
     }
@@ -38,13 +38,13 @@ class ForgotPasswordComponent extends Component {
     render() {
         return (<>
 
-            <div style={{ backgroundColor: "#116466" }} >
+            <div style={{ backgroundColor: "white" }} >
                 <Navbar />
-                <div style={{ textAlign: "center", margin: "50px", color: "#F8F9F9" }}><h1><strong>Reset Password</strong></h1></div>
+                <div style={{ textAlign: "center", margin: "20px", color: "black" }}><h1><strong>Reset Password</strong></h1></div>
 
-                <form className="row g-3 " style={{padding: "48px" }} >
+                <form className="row g-3 " style={{ padding: "40px" }} >
 
-                    <div className="col-md-3 " style={{ marginLeft: "38%",color: "#F8F9F9" }}>
+                    <div className="col-md-3 " style={{ marginTop: "0%", marginLeft: "38%", color: "#black" }}>
                         <label for="exampleFormControlInput1" className="form-label">Email Address</label>
                         <input type="email" class="form-control" id="exampleFormControlInput1"
                             placeholder="Ex. name@example.com" value={this.state.email} onChange={this.changeEmailHandler} />
@@ -52,9 +52,9 @@ class ForgotPasswordComponent extends Component {
 
                     <div className="col-12" style={{ textAlign: "center" }}>
                         {/* <NavLink to="/Login" class="btn btn-primary ">SUBMIT</NavLink> */}
-                        <NavLink  type="reset" to="/PasswordResetComponent" class="btn btn-success" onClick={this.sendMail} style={{ background: "#1877F2", padding: "6px 24px"  }} >Submit</NavLink>
+                        <NavLink to="/PasswordResetComponent" class="btn btn-success" onClick={this.sendMail} style={{ background: "#1877F2", padding: "6px 24px" }} >Submit</NavLink>
                     </div>
-                   
+
 
                 </form>
 

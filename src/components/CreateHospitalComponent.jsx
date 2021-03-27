@@ -14,7 +14,7 @@ class CreateHospitalComponent extends Component {
             username: '',
             password: '',
             hspAdd: '',
-            pincode: ''
+            pinCode: ''
         }
         this.changeNameHandler = this.changeNameHandler.bind(this);
         this.changeEmailHandler = this.changeEmailHandler.bind(this);
@@ -32,13 +32,14 @@ class CreateHospitalComponent extends Component {
         let hospital = {
             name: this.state.name, email: this.state.email, username: this.state.username,
             password: this.state.password,
-            hspAdd: this.state.hspAdd, pincode: this.state.pincode
+            hspAdd: this.state.hspAdd, pinCode: this.state.pinCode
 
         };
         console.log('hospital =>' + JSON.stringify(hospital));
 
         HospitalService.createHosp(hospital).then(res => {
             console.log('success');
+            alert('Hospiatl Registration Successfull');
         });
 
     }
@@ -63,32 +64,32 @@ class CreateHospitalComponent extends Component {
     }
 
     changePinCodeHandler = (event) => {
-        this.setState({ pincode: event.target.value });
+        this.setState({ pinCode: event.target.value });
     }
 
 
     render() {
         return (<>
+            <Navbar />
+            <div style={{ backgroundColor: "#white", display: "grid", justifyContent: "center" }} >
 
-            <div style={{ backgroundColor: "#116466" }} >
-                <Navbar />
-                <div style={{ textAlign: "center", margin: "00px", color: "#F8F9F9" }}><h1><strong>Hospital Registration</strong></h1></div>
+                <div style={{ textAlign: "center", margin: "00px", color: "#185394" }}><h2><strong>Hospital Registration</strong></h2></div>
 
-                <form class="row g-3" style={{ padding: "48px", width: "100%" }} >
+                <form class=" col g-3 mb-5 " style={{ padding: "48px", width: "100%", border: "1px solid ", borderRadius: "5px" }} >
 
-                    <div class="col-md-3" style={{ color: "#F8F9F9" }}>
+                    <div class="row-md-3 " style={{ color: "#black", width: "100%" }}>
                         <label for="validationDefault01" class="form-label">Organization</label>
-                        <input type="text" class="form-control" id="validationDefault01" placeholder="Enter Organization Name" required
+                        <input type="text" class="form-control " id="validationDefault01" placeholder="Enter Organization Name" required
                             value={this.state.name} onChange={this.changeNameHandler} />
                     </div>
 
-                    <div class="col-md-3" style={{ color: "#F8F9F9" }}>
+                    <div class="row-md-3 " style={{ color: "#black", width: "100%" }}>
                         <label for="exampleFormControlInput1" class="form-label">Email Address</label>
                         <input type="email" class="form-control" id="exampleFormControlInput1"
                             placeholder="Ex. name@example.com" value={this.state.email} onChange={this.changeEmailHandler} />
                     </div>
 
-                    <div className="col-md-3" style={{ color: "#F8F9F9" }}>
+                    <div className="row-md-3" style={{ color: "#black", width: "100%" }}>
                         <label htmlFor="validationDefaultUsername" className="form-label">Username</label>
                         <div className="input-group">
 
@@ -97,15 +98,15 @@ class CreateHospitalComponent extends Component {
                         </div>
                     </div>
 
-                    <div class="col-md-3" style={{ color: "#F8F9F9" }}>
+                    <div class="row-md-3 justify-content-center" style={{ color: "#black", width: "100%" }}>
                         <label for="validationDefault05" class="form-label">Password</label>
                         <input type="password" class="form-control" id="validationDefault05" placeholder="Password must be Strong" required
                             value={this.state.password} onChange={this.changePasswordHandler} />
                     </div>
 
-                    <div class="col-md-3" style={{ color: "#F8F9F9" }}>
+                    <div class="row-md-3 justify-content-center" style={{ color: "#black", width: "100%" }}>
                         <label for="exampleFormControlTextarea1" class="form-label">Address</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" placeholder="Enter your Address" required
                             value={this.state.hspAdd} onChange={this.changeAddressHandler}>
 
                         </textarea>
@@ -113,14 +114,14 @@ class CreateHospitalComponent extends Component {
 
 
 
-                    <div className="col-md-3" style={{ color: "#F8F9F9 " }}>
+                    <div className="row-md-3 justify-content-center" style={{ color: "#black " }}>
                         <label htmlFor="exampleFormControlInput1" className="form-label">Pin Code</label>
-                        <input type="number" className="form-control" id="exampleFormControlInput1"
-                            value={this.state.pincode} onChange={this.changePinCodeHandler} />
+                        <input type="number" className="form-control" id="exampleFormControlInput1" placeholder="Enter Pincode" required
+                            value={this.state.pinCode} onChange={this.changePinCodeHandler} />
 
                     </div>
 
-                    <div class="col-12" style={{ color: "#F8F9F9 " }}>
+                    <div class="col-12" style={{ color: "#black " }}>
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required />
                             <label class="form-check-label" for="invalidCheck2">

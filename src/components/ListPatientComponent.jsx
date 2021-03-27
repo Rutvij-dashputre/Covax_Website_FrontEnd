@@ -19,9 +19,9 @@ class ListPatientComponent extends Component {
 
     deletePatient(id) {
         Delete.deletePatient(id).then(res => {
-            this.setState({patient: this.state.patient.filter(patient => patient.id !== id)});
+            this.setState({ patient: this.state.patient.filter(patient => patient.id !== id) });
         });
-         
+
     }
 
     componentDidMount() {
@@ -33,14 +33,14 @@ class ListPatientComponent extends Component {
 
     render() {
         return (
-            <div style={{ backgroundColor: "#116466" }}>
+            <div style={{ backgroundColor: "#white", height: "50vh" }}>
                 <Navbar />
-                <div class="col-12" style={{ textAlign: "right", color: "White", padding: "12px 12px" }}>
-                    <NavLink to="/CreateHomeComponent" class="btn btn-success" style={{ background: "#5c7b90", padding: "6px 24px" }} >Logout</NavLink><br></br>
+                <div class="col-12" style={{ textAlign: "right", color: "black", padding: "12px 12px" }}>
+                    <NavLink to="/CreateHomeComponent" class="btn btn-success" style={{ background: "#5c7b90" }} >Logout</NavLink><br></br>
                 </div>
-                <h2 className="text-center">Patient Details</h2>
-                <div className="row">
-                    <table className="table table-strped table-bordered">
+                <h2 className="text-center">Patient Details</h2> <br />
+                <div className="row" >
+                    <table className="table table-strped table-bordered ml-5 " style={{ borderCollapse: "collapse", textAlign: "center", width: "90%" }}>
                         <thead>
                             <tr>
                                 <th>Patient Name</th>

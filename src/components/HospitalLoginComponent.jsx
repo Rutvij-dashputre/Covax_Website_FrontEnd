@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import HospitalLoginService from '../services/HospitalLoginService';
-import { NavLink , Redirect } from 'react-router-dom';
+import { NavLink, Redirect } from 'react-router-dom';
 import Navbar from "../Navbar";
 
 
@@ -58,53 +58,53 @@ class HospitalLoginComponent extends Component {
 
 
     render() {
-        if(this.state.loggedIn){
+        if (this.state.loggedIn) {
             return <Redirect to="/HospSessionComponent" />
         }
         return (<>
+            <Navbar />
+            <div style={{ backgroundColor: "#white", width: "100%", height: "100%" }} >
 
-            <div style={{ backgroundColor: "#116466" }} >
-                <Navbar />
-                <div style={{ textAlign: "center", margin: "00px", color: "#F8F9F9" }}><h1><strong>Hospital Login</strong></h1></div>
+                <div className="col-md-6 col-6 mx-auto  ">
+                    <form className="mt-3" style={{ display: "grid", justifyContent: "center", border: "1px solid ", borderRadius: "5px" }} onSubmit={this.submitHandler}>
 
-                <form onSubmit={this.submitHandler}>
+                        {/*  <div style={{ textAlign: "center", color: "White" }}><strong><h2 style={{  color: "White" }}>LOGIN HERE</h2></strong></div><br/> */}
+                        <div class="row-md-3" style={{ color: "#black" }}>
+                            <label for="validationDefault01" class="form-label"><strong>Username</strong></label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your Full Name Here" required
+                                name="username"
 
-                    {/*  <div style={{ textAlign: "center", color: "White" }}><strong><h2 style={{  color: "White" }}>LOGIN HERE</h2></strong></div><br/> */}
-                    <div class="mb-3" style={{ color: "#F8F9F9" }}>
-                        <label for="validationDefault01" class="form-label"><strong>Username</strong></label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your Full Name Here" required
-                            name="username"
+                                value={this.state.username} onChange={this.changeUserNameHandler}
 
-                            value={this.state.username} onChange={this.changeUserNameHandler}
+                                placeholder="Enter Your Username" />
+                            {/* <p style={{ color: "red" }}>{errors.username}</p> */}
 
-                            placeholder="Enter Your Username" />
-                        {/* <p style={{ color: "red" }}>{errors.username}</p> */}
-
-                    </div>
-
-                    <div class="mb-3" style={{ color: "#F8F9F9" }}>
-                        <label for="validationDefault01" class="form-label"><strong>Password</strong></label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your Valid Password Here" required
-                            name="phone"
-
-                            value={this.state.password} onChange={this.changePasswordHandler}
-                            placeholder="Enter Your Valid Password" />
-                        {/* <p style={{ color: "red" }}>{errors.phone}</p> */}
-
-                    </div>
-
-                    <div class="col-12" style={{ textAlign: "center", color: "White" }}>
-                        <NavLink to="./HospSessionComponent" class="btn btn-success" onClick={this.saveSession} style={{ background: "#1877F2", padding: "8px 50px" }} >Log In</NavLink><br></br>
-
-                        <div class="col-12 " style={{ textAlign: "center", color: "White", padding: "12px 12px" }}>
-                            <NavLink to="/ForgotPasswordComponent">  <a forgot_password="" href="/login/forget">Forgot Password ?</a><br />  </NavLink>
                         </div>
 
+                        <div class="row-md-3" style={{ color: "#black" }}>
+                            <label for="validationDefault01" class="form-label"><strong>Password</strong></label>
+                            <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your Valid Password Here" required
+                                name="phone"
 
-                    </div>
+                                value={this.state.password} onChange={this.changePasswordHandler}
+                                placeholder="Enter Your Valid Password" />
+                            {/* <p style={{ color: "red" }}>{errors.phone}</p> */}
 
-                </form>
+                        </div>
 
+                        <div class="mt-3 col-12" style={{ textAlign: "center", color: "black" }}>
+                            <NavLink to="./HospSessionComponent" class="btn btn-success" onClick={this.saveSession} style={{ background: "#1877F2", padding: "8px 50px" }} >Log In</NavLink><br></br>
+
+                            <div class="col-12 " style={{ textAlign: "center", color: "black", padding: "12px 12px" }}>
+                                <NavLink to="/ForgotPasswordComponent">  <a forgot_password="" href="/login/forget">Forgot Password ?</a><br />  </NavLink>
+                            </div>
+
+
+                        </div>
+
+                    </form><br />
+
+                </div>
             </div>
         </>
 
@@ -113,6 +113,3 @@ class HospitalLoginComponent extends Component {
 }
 
 export default HospitalLoginComponent;
-
-
-

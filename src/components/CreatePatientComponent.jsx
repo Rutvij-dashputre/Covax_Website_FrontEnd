@@ -52,6 +52,7 @@ class CreatePatientComponent extends Component {
 
         PatientService.createPatient(patient).then(res => {
             console.log('success');
+            alert('Registration Successfull ! !');
         });
 
     }
@@ -104,27 +105,28 @@ class CreatePatientComponent extends Component {
     }
     render() {
         return (<>
-
-            <div style={{ backgroundColor: "#116466", width: "100%" }} >
             <Navbar />
-                <div style={{ textAlign: "center", margin: "00px", color: "#F8F9F9" }}><h1><strong>REGISTER HERE</strong></h1></div>
+            <div style={{ backgroundColor: "#white", width: "100%", display: "grid", justifyContent: "center" }} >
 
-                <form className="row g-3" style={{ padding: "48px", width: "100%" }} >
 
-                    <div className="col-md-3" style={{ color: "#F8F9F9" }}>
-                        <label htmlFor="validationDefault01" className="form-label">Name</label>
+                <form className="col mb-5 mt-3 " style={{ padding: "68px", width: "100%", border: "1px solid ", borderRadius: "5px" }} >
+
+                    <div style={{ textAlign: "center", margin: "00px", color: "#185394" }}><h2><strong>Register Here</strong></h2></div>
+
+                    <div className="row-md-3" style={{ color: "#black", width: "100%" }}>
+                        <label htmlFor="validationDefault01" className="form-label"><strong>Name</strong></label>
                         <input type="text" className="form-control" id="validationDefault01" placeholder="Enter Your Name Here" required
                             value={this.state.name} onChange={this.changeNameHandler} />
                     </div>
 
-                    <div className="col-md-3" style={{ color: "#F8F9F9" }}>
-                        <label htmlFor="exampleFormControlInput1" className="form-label">Email Address</label>
+                    <div className="row-md-3" style={{ color: "#black", width: "100%" }}>
+                        <label htmlFor="exampleFormControlInput1" className="form-label"><strong>Email Address</strong> </label>
                         <input type="email" className="form-control" id="exampleFormControlInput1"
                             placeholder="Ex. name@example.com" value={this.state.email} onChange={this.changeEmailHandler} />
                     </div>
 
-                    <div className="col-md-3" style={{ color: "#F8F9F9" }}>
-                        <label htmlFor="validationDefaultUsername" className="form-label">Username</label>
+                    <div className="row-md-3" style={{ color: "#black", width: "100%" }}>
+                        <label htmlFor="validationDefaultUsername" className="form-label"><strong>Username</strong></label>
                         <div className="input-group">
 
                             <input type="text" className="form-control" id="validationDefaultUsername" placeholder="Enter Your Username" aria-describedby="inputGroupPrepend2" required
@@ -132,84 +134,88 @@ class CreatePatientComponent extends Component {
                         </div>
                     </div>
 
-                    <div className="col-md-3" style={{ color: "#F8F9F9" }}>
-                        <label htmlFor="validationDefault05" className="form-label">Password</label>
+                    <div className="row-md-3" style={{ color: "#black", width: "100%" }}>
+                        <label htmlFor="validationDefault05" className="form-label"><strong>Password</strong></label>
                         <input type="password" className="form-control" id="validationDefault05" placeholder="Password must be Strong" required
                             value={this.state.password} onChange={this.changePasswordHandler} />
                     </div>
 
-                    <div className="col-md-3" style={{ color: "#F8F9F9" }}>
-                        <label htmlFor="exampleFormControlTextarea1" className="form-label">Address</label>
-                        <textarea className="form-control" id="exampleFormControlTextarea1" rows="1"
+                    <div className="row-md-3" style={{ color: "#black" }}>
+                        <label htmlFor="exampleFormControlTextarea1" className="form-label"><strong>Address</strong></label>
+                        <textarea className="form-control" id="exampleFormControlTextarea1" rows="1" placeholder="Enter Your Address" required
                             value={this.state.address} onChange={this.changeAddressHandler}>
                         </textarea>
                     </div>
 
-                    <div className="col-md-3" style={{ color: "#F8F9F9 " }}>
-                        <label htmlFor="exampleFormControlInput1" className="form-label">Aadhaar Number</label>
-                        <input type="number" className="form-control" id="exampleFormControlInput1"
+                    <div className="row-md-3" style={{ color: "#black " }}>
+                        <label htmlFor="exampleFormControlInput1" className="form-label"><strong>Aadhaar Number</strong></label>
+                        <input type="number" className="form-control" id="exampleFormControlInput1" placeholder="Enter Your Aadhar Number" required
                             value={this.state.aadharNo} onChange={this.changeAadharNoHandler} />
 
                     </div>
 
 
-                    <div className="col-md-3" style={{ color: "#F8F9F9 " }}>
-                        <label htmlFor="exampleFormControlInput1" className="form-label">Age</label>
-                        <input type="number" className="form-control" id="exampleFormControlInput1"
+                    <div className="row-md-3" style={{ color: "#black" }}>
+                        <label htmlFor="exampleFormControlInput1" className="form-label"><strong>Age</strong></label>
+                        <input type="number" className="form-control" id="exampleFormControlInput1" placeholder="Enter Your Age" required
                             value={this.state.age} onChange={this.changeAgeHandler} />
 
                     </div>
 
 
-                    <div className="col-md-3" style={{ color: "#F8F9F9" }}>
-                        <label htmlFor="exampleFormControlTextarea1" className="form-label">State</label>
-                        <textarea className="form-control" id="exampleFormControlTextarea1" rows="1"
+                    <div className="row-md-3" style={{ color: "#black" }}>
+                        <label htmlFor="exampleFormControlTextarea1" className="form-label"><strong>State</strong></label>
+                        <textarea className="form-control" id="exampleFormControlTextarea1" rows="1" placeholder="Enter Your State" required
                             value={this.state.state} onChange={this.changeStateHandler}>
                         </textarea>
                     </div>
 
 
-                    <div className="col-md-3" style={{ color: "#F8F9F9" }}>
-                        <label htmlFor="exampleFormControlTextarea1" className="form-label">Gender</label>
-                        <textarea className="form-control" id="exampleFormControlTextarea1" rows="1"
+                    <div className="row-md-3" style={{ color: "#black" }}>
+                        <label htmlFor="exampleFormControlTextarea1" className="form-label"><strong>Gender</strong></label>
+                        <textarea className="form-control" id="exampleFormControlTextarea1" rows="1" placeholder="Enter Your Gender" required
                             value={this.state.gender} onChange={this.changeGenderHandler}>
                         </textarea>
                     </div>
 
 
 
-                    <div className="col-md-3" style={{ color: "#F8F9F9 " }}>
-                        <label htmlFor="exampleFormControlInput1" className="form-label">Mobile Number</label>
-                        <input type="number" className="form-control" id="exampleFormControlInput1"
+                    <div className="row-md-3" style={{ color: "#black " }}>
+                        <label htmlFor="exampleFormControlInput1" className="form-label"><strong>Mobile Number</strong></label>
+                        <input type="number" className="form-control" id="exampleFormControlInput1" placeholder="Enter Your Mobile Number" required
                             value={this.state.mobile} onChange={this.changeMobileHandler} />
 
                     </div>
-                    <div className="col-md-3" style={{ color: "#F8F9F9 " }}>
-                        <label htmlFor="exampleFormControlInput1" className="form-label">Pin Code</label>
-                        <input type="number" className="form-control" id="exampleFormControlInput1"
+                    <div className="row-md-3" style={{ color: "#black " }}>
+                        <label htmlFor="exampleFormControlInput1" className="form-label"><strong>Pin Code</strong></label>
+                        <input type="number" className="form-control" id="exampleFormControlInput1" placeholder="Enter Your PinCode Here" required
                             value={this.state.pincode} onChange={this.changePinCodeHandler} />
 
                     </div>
+                    <br />
 
+                    <div className="form-check mb-0  margin-left-2">
+                        <input className="form-check-input " type="checkbox"
+                            defaultChecked={this.state.coronaPositive}
+                            onChange={this.toggleChange}
+                        />
 
-                    <div className="col-12 d-flex align-items-center" style={{ color: "#F8F9F9 " }}>
+                        <label className="form-check-label" for="invalidCheck2">
+                            <strong>Corona Positive</strong>
+                        </label>
+                    </div>
+
+                    <div className="row-12 d-flex align-items-center" style={{ color: "#black " }}>
                         <div className="form-check">
                             <input className="form-check-input" type="checkbox" value="" id="invalidCheck2" required />
                             <label className="form-check-label" for="invalidCheck2">
-                                Agree to terms and conditions
-              </label>
+                                <strong>Agree to terms and conditions</strong>
+                            </label>
                         </div>
-                        <div  className="form-check mb-0  margin-left-2">
-                            <input  className="form-check-input " type="checkbox"
-                                defaultChecked={this.state.coronaPositive}
-                                onChange={this.toggleChange}
-                            />
 
-                            <label className="form-check-label" for="invalidCheck2">
-                                Corona Positive
-              </label>
-                        </div>
+
                     </div>
+                    <br></br>
 
                     <div className="col-12" style={{ textAlign: "center" }}>
                         {/* <NavLink to="/Login" className="btn btn-primary ">SUBMIT</NavLink> */}

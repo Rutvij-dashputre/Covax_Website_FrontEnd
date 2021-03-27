@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-duplicate-props */
 import React from 'react';
 import Navbar from "./Navbar";
 import { NavLink } from 'react-router-dom';
@@ -49,7 +50,7 @@ class Home extends React.Component {
         // const Home = () => {
         return (<>
 
-            <div style={{ backgroundColor: "#116466" }}>
+            <div style={{ backgroundColor: "#116466", height: "800px", maxHeight: "100%" }}>
                 <Navbar />
 
                 <section id="header" className="d-flex align-items-center" >
@@ -62,8 +63,8 @@ class Home extends React.Component {
 
 
                                     <div className="col-md-6 pt-lg-0 order-2 order-lg-1 d-flex justify-content-center flex-column">
-                                        <h3 style={{ color: "#F1C40F" }}><strong>WELCOME TO COVAX.COM</strong></h3>
-                                        <h5 style={{ color: "white" }}> <strong> COVID-19 VACCINE INFORMATION</strong>
+                                        <h3 style={{ color: "black" }}><strong>Your best shot at good health</strong></h3>
+                                        <h5 style={{ color: "white" }}> <strong> Get yourself vaccinated</strong>
                                         </h5>
                                         <h2 className="my-3">
                                             <strong className="brand-name">Things to Know about the COVID-19 Vaccination Program..</strong>
@@ -170,7 +171,7 @@ class Home extends React.Component {
                         <div className="col-10 mx-auto">
                             <div className="row gy-4">
                                 <div className="col-md-3 col-10 mx-auto">
-                                    <div class="card">
+                                    <div class="card" >
                                         <img src={img1} class="card-img-top" alt="..." />
                                         <div class="card-body" style={{ backgroundColor: "#7DCEA0" }}>
                                             <h5 class="card-title" style={{ textAlign: "center" }}><strong>Community Immunity </strong></h5>

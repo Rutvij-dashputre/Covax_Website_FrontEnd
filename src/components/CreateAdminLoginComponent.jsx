@@ -98,34 +98,32 @@ class CreateAdminLoginComponent extends Component {
             return <Redirect to="/admin" />
         }
         return (<>
-            <div style={{ backgroundColor: "#116466" }}>
-                <Navbar />
+            <Navbar />
+            <div style={{ backgroundColor: "#white", width: "100%", height: "100%" }} >
+
+                <div className="col-md-6 col-6 mx-auto  ">
 
 
-                <div className="col-md-6 col-6 mx-auto">
-                    <form onSubmit={this.submitHandler}>
+                    <form className="mt-3" style={{ display: "grid", justifyContent: "center", border: "1px solid ", borderRadius: "5px" }} onSubmit={this.submitHandler}>
 
                         {/*  <div style={{ textAlign: "center", color: "White" }}><strong><h2 style={{  color: "White" }}>LOGIN HERE</h2></strong></div><br/> */}
                         {/* <div class="mb-3" style={{ color: "#F8F9F9" }}>
                                                             <label for="validationDefault01" class="form-label"><strong>Username</strong></label>
                                                             <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your Full Name Here" required
                                                                 name="username"
-
                                                                 value={this.state.username} onChange={this.changeUserNameHandler}
-
                                                                 placeholder="Enter Your Username" />
                                                             <p style={{ color: "red" }}>{errors.username}</p> 
-
                                                         </div> */}
 
-                        <div class="mb-3" style={{ color: "#F8F9F9" }}>
+                        <div class="row-md-3 " style={{ color: "#black", marginTop: "50px" }}>
                             <label for="validationDefault01" class="form-label"><strong>Username</strong></label>
                             <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your Username Here" required
                                 name="username"
 
                                 onChange={this.changeHandler}
 
-                                placeholder="Please Enter Your Username" />
+                                placeholder=" Enter Your Username" />
                             <p style={{ color: "red" }}>{errors.username}</p>
 
                         </div>
@@ -134,20 +132,18 @@ class CreateAdminLoginComponent extends Component {
                                                             <label for="validationDefault01" class="form-label"><strong>Password</strong></label>
                                                             <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your Valid Password Here" required
                                                                 name="password"
-
                                                                 value={this.state.password} onChange={this.changePasswordHandler}
                                                                 placeholder="Enter Your Valid Password" />
                                                              <p style={{ color: "red" }}>{errors.password}</p> 
-
                                                         </div> */}
 
-                        <div class="mb-3" style={{ color: "#F8F9F9" }}>
+                        <div class="row-md-3" style={{ color: "#black", width: "100%" }}>
                             <label for="validationDefault01" class="form-label"><strong>Password</strong></label>
                             <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your Valid Password" required
                                 name="password"
 
                                 onChange={this.changeHandler}
-                                placeholder="Please Enter Your Valid Password" />
+                                placeholder=" Enter Your  Password" />
                             <p style={{ color: "red" }}>{errors.password}</p>
 
                         </div>
@@ -155,16 +151,17 @@ class CreateAdminLoginComponent extends Component {
 
 
 
-                        <div class="col-12" style={{ textAlign: "center", color: "White" }}>
+                        <div class="col-12 mb-3" style={{ textAlign: "center", color: "White" }}>
                             <NavLink to="./CreateSessionComponent" class="btn btn-success" onClick={this.saveSession} style={{ background: "#1877F2", padding: "8px 50px" }} >Log In</NavLink><br></br>
 
 
 
                         </div>
 
-                    </form>
+                    </form><br />
                 </div>
             </div>
+
         </>
 
 

@@ -48,8 +48,8 @@ width:100%
 .navbar a:hover {
   
 
-   color: tomato !important; 
-  /* color: #3498db !important; */
+  color: #9df100 !important; 
+  transition: 0.5s ease-out;
 }
 
 @media (max-width: 991px) {
