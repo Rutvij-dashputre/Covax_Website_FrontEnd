@@ -33,7 +33,7 @@ class ListPatientComponent extends Component {
 
     render() {
         return (
-            <div style={{ backgroundColor: "#white", height: "50vh" }}>
+            <div style={{ backgroundColor: "#white", height: "100%" }}>
                 <Navbar />
                 <div class="col-12" style={{ textAlign: "right", color: "black", padding: "12px 12px" }}>
                     <NavLink to="/CreateHomeComponent" class="btn btn-success" style={{ background: "#5c7b90" }} >Logout</NavLink><br></br>
